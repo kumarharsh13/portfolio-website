@@ -1,0 +1,57 @@
+.navigation {
+  z-index: 50;
+  background-color: rgba(255 255 255 / 70%);  
+	backdrop-filter: blur(20px);
+}
+
+.navigation::after {
+	content: '';
+	width: 100vw;
+	height: 2px;
+  background-color: rgba(255 255 255 / 70%);  
+	position: absolute;
+	bottom: -5px;
+	left: 50%;
+	transform:  translateX(-50%);
+	border-radius: 34px;
+	animation: bubble 0.5s ease-in-out 1;
+
+	@keyframes bubble {
+		0% {
+			width: 20px;
+		}
+		50% {
+			width: 10px;
+		}
+		100% {
+			width: 20px;
+		}
+	}
+}
+
+.navMenuContainer {
+	padding: 1.2rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.logo {
+
+}
+
+.navItems {
+
+}
+
+.navItemList {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navItemList li {
+	text-decoration: none;
+	list-style-type: none;
+	margin-left: 2rem;
+}
