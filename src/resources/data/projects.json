@@ -1,0 +1,42 @@
+[
+	{
+		"projectTitle": "Portfolio Website",
+		"description": "A personal portfolio website to showcase my skills, experience, and projects. It includes a clean, responsive design and is built with React.js.",
+		"technologiesUsed": [
+			"React.js",
+			"CSS3",
+			"HTML5",
+			"JavaScript",
+			"GitHub Pages"
+		],
+		"startDate": "2023-01-01",
+		"endDate": "2023-02-15",
+		"projectURL": "https://myportfolio.com",
+		"repoURL": "https://github.com/myusername/portfolio",
+		"keyFeatures": [
+			"Responsive design for mobile and desktop",
+			"Portfolio section with project details and links",
+			"About me section with skills and technologies"
+		]
+	},
+	{
+		"projectTitle": "Weather App",
+		"description": "A weather forecasting application that provides real-time weather data using the OpenWeatherMap API. Built with React.js and Axios for API integration.",
+		"technologiesUsed": [
+			"React.js",
+			"Axios",
+			"OpenWeatherMap API",
+			"CSS3",
+			"JavaScript"
+		],
+		"startDate": "2022-08-15",
+		"endDate": "2022-09-30",
+		"projectURL": "https://weatherapp.com",
+		"repoURL": "https://github.com/myusername/weather-app",
+		"keyFeatures": [
+			"Real-time weather data with dynamic city search",
+			"Displays temperature, humidity, and wind speed",
+			"Ability to switch between Celsius and Fahrenheit"
+		]
+	}
+]

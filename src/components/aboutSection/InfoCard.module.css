@@ -1,0 +1,48 @@
+.aboutSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.imageContainer {
+  width: 50%;
+}
+
+.infoContainer {
+  width: 50%;
+}
+
+.imageContainer img {
+  width: 70%;
+}
+
+.dataCard {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  padding-left: 2rem;
+}
+
+.details p {
+  text-align: justify;
+}
+
+.logo {
+  width: 40%;
+}
+
+.companyTenure {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .dataCard {
+    width: 100%;
+    padding: 10px;
+  }
+}

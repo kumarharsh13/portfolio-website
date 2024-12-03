@@ -1,0 +1,113 @@
+.heroSection {
+  border: 2px solid red;
+}
+
+.yogaMan {
+  padding-top: 8rem;
+}
+
+.yogaManImage {
+  width: 30rem;
+  height: auto;
+  /* Adjust height as needed */
+  border: 2px solid blue;
+}
+
+.htmlIcon,
+.cssIcon,
+.javascriptIcon,
+.nodejslIcon,
+.reactjsIcon,
+.cppIcon,
+.pythonIcon,
+.mysqlIcon,
+.posgresqlIcon,
+.githubIcon,
+.photoshopIcon,
+.rubyIcon,
+.railsIcon {
+  width: 40px;
+  height: auto;
+}
+
+.techContainer {
+  border: 2px solid green;
+}
+
+.pythonStyle {
+  position: absolute;
+  top: 25rem;
+  left: 38rem;
+}
+
+.htmlStyle {
+  position: absolute;
+  top: 20rem;
+  left: 36rem;
+}
+
+.cssStyle {
+  position: absolute;
+  top: 15rem;
+  left: 34rem;
+}
+
+.javascriptStyle {
+  position: absolute;
+  top: 10rem;
+  left: 32rem;
+}
+
+.nodejsStyle {
+  position: absolute;
+  top: 5rem;
+  left: 30rem;
+}
+
+.reactjsStyle {
+  position: absolute;
+  top: 1rem;
+  left: 26rem;
+}
+
+.cppStyle {
+  position: absolute;
+  top: -1rem;
+  left: 21rem;
+}
+
+.railsStyle {
+  position: absolute;
+  top: 1rem;
+  left: 16rem;
+}
+
+.rubyStyle {
+  position: absolute;
+  top: 5rem;
+  left: 12rem;
+}
+
+.mysqlStyle {
+  position: absolute;
+  top: 10rem;
+  left: 10rem;
+}
+
+.posgresqlStyle {
+  position: absolute;
+  top: 15rem;
+  left: 8rem;
+}
+
+.githubStyle {
+  position: absolute;
+  top: 20rem;
+  left: 6rem;
+}
+
+.photoshopStyle {
+  position: absolute;
+  top: 25rem;
+  left: 4rem;
+}

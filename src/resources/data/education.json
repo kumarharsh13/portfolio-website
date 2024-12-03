@@ -1,0 +1,16 @@
+[
+	{
+		"degree": "Master of Computer Applicaitons",
+		"institution": "National Institute of Technology",
+		"location": "Raipur, Chhattisgarh",
+		"startDate": "2020",
+		"endDate": "2023"
+	},
+	{
+		"degree": "Bachelors of Computer Applications",
+		"institution": "Maharishi Arvind Institute of Science & Management",
+		"location": "Jaipur, Rajasthan",
+		"startDate": "2016",
+		"endDate": "2019"
+	}
+]
