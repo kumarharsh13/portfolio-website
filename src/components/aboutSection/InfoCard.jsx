@@ -1,13 +1,24 @@
 import PropTypes from "prop-types";
-
-import Yoga from "../../resources/images/Yoga.png";
 import styles from "../aboutSection/InfoCard.module.css";
+import yabxLogo from "../../resources/icons/yabx.svg";
+import comvivaLogo from "../../resources/icons/comviva.png";
+import nitrrLogo from "../../resources/icons/nitrr.png";
+import maismLogo from "../../resources/icons/maism.png";
+
+const logos = {
+  "yabx.svg": yabxLogo,
+  "comviva.png": comvivaLogo,
+  "nitrr.png": nitrrLogo,
+  "maism.png": maismLogo
+};
 
 InfoCard.propTypes = {
+  infoCardDetails: PropTypes.array.isRequired,
+  infoImage: PropTypes.string.isRequired,
   flexDirection: PropTypes.string,
 };
 
-function InfoCard({ infoCardDetails, flexDirection = "row" }) {
+function InfoCard({ infoCardDetails, infoImage, flexDirection = "row" }) {
   return (
     <div
       className={styles.infoCard}
@@ -19,7 +30,7 @@ function InfoCard({ infoCardDetails, flexDirection = "row" }) {
       }}
     >
       <div className={styles.imageContainer}>
-        <img src={Yoga} />
+        <img src={infoImage} alt="Info visual representation" />
       </div>
       <div className={styles.infoContainer}>
         {infoCardDetails.map((info, index) => (
@@ -31,9 +42,11 @@ function InfoCard({ infoCardDetails, flexDirection = "row" }) {
 }
 
 function DataCard({ info }) {
+  const logoSrc = logos[info.logo] || null
+
   return (
     <div className={styles.dataCard}>
-      <img src={Yoga} alt="Yoga" className={styles.logo} />
+      <img src={logoSrc} alt={info.company || info.institution} className={styles.logo} />
       <div className={styles.details}>
         <h2>{info.jobTitle || info.degree}</h2>
         <h4 className={styles.companyTenure}>

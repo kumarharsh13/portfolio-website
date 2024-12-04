@@ -4,6 +4,7 @@
 		"institution": "National Institute of Technology",
 		"location": "Raipur, Chhattisgarh",
 		"startDate": "2020",
+		"logo": "nitrr.png",
 		"endDate": "2023"
 	},
 	{
@@ -11,6 +12,7 @@
 		"institution": "Maharishi Arvind Institute of Science & Management",
 		"location": "Jaipur, Rajasthan",
 		"startDate": "2016",
+		"logo": "maism.png",
 		"endDate": "2019"
 	}
 ]

@@ -4,6 +4,7 @@
 		"company": "YABX",
 		"startDate": "Aug-2023",
 		"endDate": "Present",
+		"logo": "yabx.svg",
 		"description": "Experienced software engineer with a comprehensive background in Ruby on Rails (RoR), with expertise in optimizing application performance, developing and integrating APIs, and enhancing user interfaces (UI). Skilled in creating seamless, intuitive UIs while also focusing on backend performance and system reliability. Proven ability to troubleshoot complex issues, implement code fixes, and deliver efficient, user-centric solutions that meet business needs."    
 	},
 	{
@@ -11,6 +12,7 @@
 		"company": "Comviva",
 		"startDate": "Feb-2023",
 		"endDate": "Aug-2023",
+		"logo": "comviva.png",
 		"description": "As a Product Development Intern, I focused on improving code quality, writing tests, and gaining hands-on experience with front-end and back-end technologies. I worked closely with the development team to implement best practices and contribute to a variety of projects, including building and testing features for a full-stack web application."
 	}
 ]

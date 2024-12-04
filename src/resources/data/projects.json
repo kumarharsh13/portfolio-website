@@ -1,42 +1,89 @@
 [
 	{
-		"projectTitle": "Portfolio Website",
-		"description": "A personal portfolio website to showcase my skills, experience, and projects. It includes a clean, responsive design and is built with React.js.",
+		"projectTitle": "Food Ordering Website",
+		"description": "Developed a full-stack web application for food delivery, allowing users to place orders, update personal details, and view order history. The application also includes an admin portal for tracking order status and adding new cuisines.",
 		"technologiesUsed": [
-			"React.js",
-			"CSS3",
 			"HTML5",
+			"CSS3",
 			"JavaScript",
-			"GitHub Pages"
+			"Bootstrap",
+			"MySQL",
+			"EJS",
+			"ExpressJS"
 		],
-		"startDate": "2023-01-01",
-		"endDate": "2023-02-15",
-		"projectURL": "https://myportfolio.com",
-		"repoURL": "https://github.com/myusername/portfolio",
-		"keyFeatures": [
-			"Responsive design for mobile and desktop",
-			"Portfolio section with project details and links",
-			"About me section with skills and technologies"
-		]
+		"projectImage1": "FoodOrderingWebsite1.png",
+		"projectImage2": "FoodOrderingWebsite2.png",
+		"projectURL": "",
+		"repoURL": "https://github.com/kumarharsh13/Food-Ordering-Website"
 	},
 	{
-		"projectTitle": "Weather App",
-		"description": "A weather forecasting application that provides real-time weather data using the OpenWeatherMap API. Built with React.js and Axios for API integration.",
+		"projectTitle": "Yog Aasan",
+		"description": "Designed and developed a visually appealing landing page for a yoga school, focusing on user engagement and providing essential information about classes, packages and instructors",
 		"technologiesUsed": [
-			"React.js",
-			"Axios",
-			"OpenWeatherMap API",
+			"HTML5",
+			"CSS3"
+		],
+		"projectImage1": "YogaAasan1.png",
+		"projectImage2": "YogaAasan2.png",
+		"projectURL": "https://kumarharsh13.github.io/Yog-Aasan/",
+		"repoURL": "https://github.com/kumarharsh13/Yog-Aasan"
+	},
+	{
+		"projectTitle": "Course Management System",
+		"description": "Developed a full-stack project called 'Course Management' using Rails during my internship. The platform allows admins to add courses, while users can browse and purchase them.",
+		"technologiesUsed": [
+			"HTML5",
+			"CSS3",
+			"JavaScript",
+			"Ruby",
+			"Rails",
+			"Sqlite"
+		],
+		"projectImage1": "CourseManagementSystem1.png",
+		"projectImage2": "CourseManagementSystem2.png",
+		"projectURL": "",
+		"repoURL": "https://github.com/kumarharsh13/Course-Management-System"
+	},
+	{
+		"projectTitle": "Add to Basket",
+		"description": "Add to Basket is a React-based cart application designed to practice and implement essential cart functionalities. This project focuses on key features such as adding, deleting, and updating items within the cart. It provides hands-on experience with managing state and user interactions in a React application.",
+		"technologiesUsed": [
+			"ReactJS",
+			"CSS3"
+		],
+		"projectImage1": "AddToBasket1.png",
+		"projectImage2": "AddToBasket2.png",
+		"projectURL": "https://kumarharsh13.github.io/add-to-basket/",
+		"repoURL": "https://github.com/kumarharsh13/add-to-basket"
+	},
+	{
+		"projectTitle": "N-Queen Puzzle Game",
+		"description": "N-Queen Puzzle Game is a puzzle game based on the 8-Queen Puzzle/Problem. It is a game in which we can solve the N Queen Problem for a grid or a chessboard of size N * N.",
+		"technologiesUsed": [
+			"HTML5",
 			"CSS3",
 			"JavaScript"
 		],
-		"startDate": "2022-08-15",
-		"endDate": "2022-09-30",
-		"projectURL": "https://weatherapp.com",
-		"repoURL": "https://github.com/myusername/weather-app",
-		"keyFeatures": [
-			"Real-time weather data with dynamic city search",
-			"Displays temperature, humidity, and wind speed",
-			"Ability to switch between Celsius and Fahrenheit"
-		]
+		"projectImage1": "NQueenPuzzleGame1.png",
+		"projectImage2": "NQueenPuzzleGame2.png",
+		"projectURL": "https://kumarharsh13.github.io/N-Queen-Puzzle-Game/",
+		"repoURL": "https://github.com/kumarharsh13/N-Queen-Puzzle-Game"
+	},
+	{
+		"projectTitle": "Food Ordering Website",
+		"description": "Developed a full-stack web application for food delivery, allowing users to place orders, update personal details, and view order history. The application also includes an admin portal for tracking order status and adding new cuisines.",
+		"technologiesUsed": [
+			"HTML5",
+			"CSS3",
+			"JavaScript",
+			"Bootstrap",
+			"MySQL",
+			"EJS",
+			"ExpressJS"
+		],
+		"projectImage1": "FoodOrderingWebsite1.png",
+		"projectImage2": "FoodOrderingWebsite2.png",
+		"projectURL": "",
+		"repoURL": "https://github.com/kumarharsh13/Food-Ordering-Website"
 	}
 ]
