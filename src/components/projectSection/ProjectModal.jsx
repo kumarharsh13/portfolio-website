@@ -32,14 +32,14 @@ function ProjectModal({ project, onClose }) {
   return (
     <div className={styles.projectModal} onClick={onClose}>
       <div className={styles.projectModalContant}>
+			<h2 className={styles.name}>{project.projectTitle}</h2>
         <div className={styles.projectImages}>
           <img src={imageSrc1} alt="" />
           <img src={imageSrc2} alt="" />
         </div>
         <div className={styles.nameSkills}>
-          <h3 className={styles.name}>{project.projectTitle}</h3>
           <p>{project.technologiesUsed.map((skills) => {
-						<button className={styles.skills}>{skills}</button>
+						return <button className={styles.skills}>{skills}</button>
 					})}</p>
         </div>
         <div className={styles.description}>

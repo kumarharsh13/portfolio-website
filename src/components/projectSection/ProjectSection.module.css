@@ -1,10 +1,12 @@
 .projectSection {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	gap: 4rem ;
-	justify-content: center;
-	align-items: center;
-	padding: 3rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 4rem;
+  gap: 1.5rem;
+  background: var(--neutral-white);
 }
 
 .projectCard{
@@ -15,15 +17,15 @@
 	perspective: 1000px;
   position: relative;
   cursor: pointer;
-	margin-top: 10rem;
+  margin: 2rem;
 }
 
 .projectInner {
   width: 30vw;
-  height: 30vh;
+  height: 50vh;
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 1s ease;
+  transition: transform 0.6s ease-in-out;
 }
 
 .projectCard:hover .projectInner {
@@ -39,11 +41,34 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  padding: 0.8rem;
+  margin: 1rem;
+  background-image: linear-gradient(to top, var(--light-lavender), var(--neutral-white));
+}
+
+.projectBack {
+  background-color: #f9f9f9;
+  transform: rotateY(180deg);
 }
 
 .projectImage img {
   width: 100%;
   object-fit: cover;
+  border-radius: 1rem;
+}
+
+.nameDescription {
+  margin-top: 0.8rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.6rem;
+  text-align: justify;
 }
 
 .projectBack {
@@ -57,11 +82,14 @@
   justify-content: center;
   align-items: center;
   transform: rotateY(180deg);
+  border-radius: 1rem;
+  background-image: linear-gradient(to top, var(--light-lavender), var(--neutral-white), var(--light-lavender));
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .readMoreBtn {
   padding: 10px 20px;
-  background-color: #8A82FB;
+  background-color: var(--lavender);
   color: white;
   border: none;
   border-radius: 30px;
@@ -69,10 +97,11 @@
   font-size: 1.1rem;
   cursor: pointer;
   transition: background-color 1s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .readMoreBtn:hover {
-  background-color: #6a66e1;
+  background-color: var(--deep-purple);
 }
 
 .moreInfo {
@@ -83,7 +112,27 @@
   line-height: 1.6;
 }
 
-.description{
-	text-align: justify;
+.disabledButton {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
+/* Ensure mobile responsiveness */
+@media (max-width: 768px) {
+  .projectSection {
+    padding: 2rem;
+  }
+
+  .projectCard {
+    margin-top: 1.5rem;
+  }
+
+  .projectInner {
+    width: 100%;
+    height: auto;
+  }
+
+  .readMoreBtn {
+    font-size: 1rem;
+  }
+}

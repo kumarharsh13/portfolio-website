@@ -25,8 +25,10 @@ function InfoCard({ infoCardDetails, infoImage, flexDirection = "row" }) {
       style={{
         display: "flex",
         alignItems: "center",
-        justifyContent: "center",
-        flexDirection: flexDirection,
+        justifyContent: "space-between",
+        flexDirection: flexDirection, // This makes it dynamic based on prop
+        width: "100%", // Ensure it takes full width
+        boxSizing: "border-box",
       }}
     >
       <div className={styles.imageContainer}>

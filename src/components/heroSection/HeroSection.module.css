@@ -2,12 +2,16 @@
   position: relative;
   height: 100vh;
   width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-image: linear-gradient(to bottom, var(--lavender), var(--medium-lavender), var(--light-lavender), var(--neutral-white));
 }
 
 .yogaMan {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 75%;
   transform: translate(-50%, -50%);
 }
 
@@ -19,7 +23,7 @@
 .techContainer {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 75%;
   transform-origin: 50% 50%;
   z-index: 999;
 }

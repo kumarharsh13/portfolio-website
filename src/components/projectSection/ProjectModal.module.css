@@ -19,11 +19,11 @@
 	justify-content: flex-start;
 	align-items: center;
 	gap: 1rem;
-	background-color: white;
+	background-image: linear-gradient(to top, var(--light-lavender), var(--neutral-white));
 	padding: 2rem;
 	border-radius: 1rem;
 	width: 45%;
-	height: 50%;
+	height: 55%;
 	max-width: 70rem;
 	text-align: center;
 	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -47,7 +47,7 @@
 
 .nameSkills {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
 	width: 100%;
 }
@@ -55,8 +55,13 @@
 .skills {
 	margin-left: 0.4rem;
 	padding: 0.3rem;
-	border-radius: 1rem;
+	border-radius: 0.6rem;
 	font-weight: 200;
+	background-color: var(--lavender);
+	color: var(--neutral-white);
+	border: none;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+	padding: 	0.5rem;
 }
 
 .description {
@@ -74,6 +79,14 @@
 	padding: 1rem;
 	border-radius: 30px;
 	font-weight: 700;
+	background-color: var(--lavender);
+	color: var(--neutral-white);
+	border: none;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.buttons button:hover {
+	background-color: var(--deep-purple);
 }
 
 .disabledButton {

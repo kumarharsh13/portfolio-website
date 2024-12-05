@@ -1,55 +1,94 @@
 .aboutSection {
+  margin-top: 6rem;
+}
+
+.infoCard {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 20px;
+  justify-content: space-between;
+  flex-direction: row; /* Default to row, will be changed dynamically */
+  width: 100%; /* Ensure full width is used */
+  box-sizing: border-box;
+  padding: 2rem;
+  gap: 2rem; /* Space between the image and content */
 }
 
 .imageContainer {
-  width: 50%;
-}
-
-.infoContainer {
-  width: 50%;
+  width: 50%; /* Set width for image container */
+  display: flex;
+  justify-content: center; /* Center the image */
 }
 
 .imageContainer img {
-  width: 70%;
+  width: 100%; /* Ensure image takes up full container width */
+  max-width: 30rem; /* Optional: prevent image from becoming too large */
+  object-fit: cover; /* Keep aspect ratio intact */
+}
+
+.infoContainer {
+  width: 70%; /* Allow content to take up remaining space */
+  display: flex;
+  flex-direction: column;
 }
 
 .dataCard {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 80%;
+  width: 100%; /* Full width within infoContainer */
   padding-left: 2rem;
-  margin: 2rem;
+  margin: 1rem 0; /* Adjust vertical margin */
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 20%; /* Logo width */
+  height: auto;
+  padding: 2rem;
 }
 
 .details {
   display: flex;
   flex-direction: column;
+  margin-left: 1rem; /* Space between logo and details */
 }
 
 .details p {
   text-align: justify;
-}
-
-.logo {
-  width: 20%;
-  padding: 4rem;
+  margin-top: 0.5rem; /* Space between description and other elements */
 }
 
 .companyTenure {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Space between company and tenure */
   align-items: center;
+  margin-top: 0.5rem; /* Space between job title and company info */
 }
 
+/* Responsive styles for smaller screens */
 @media (max-width: 768px) {
+  .infoCard {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+  }
+
+  .imageContainer {
+    width: 100%; /* Image container takes full width */
+    margin-bottom: 1rem; /* Space between image and content */
+  }
+
+  .infoContainer {
+    width: 100%; /* Content takes full width */
+  }
+
   .dataCard {
-    width: 100%;
+    width: 100%; /* Ensure cards take full width */
     padding: 10px;
+    flex-direction: column; /* Stack content vertically in card */
+  }
+
+  .logo {
+    width: 40%; /* Larger logos on smaller screens */
+    padding: 1rem;
   }
 }

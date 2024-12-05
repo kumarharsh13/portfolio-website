@@ -17,6 +17,35 @@
 		"repoURL": "https://github.com/kumarharsh13/Food-Ordering-Website"
 	},
 	{
+		"projectTitle": "Add to Basket",
+		"description": "Add to Basket is a React-based cart application. This project focuses on key features such as adding, deleting, and updating items within the cart. It provides hands-on experience with managing state in a React application.",
+		"technologiesUsed": [
+			"ReactJS",
+			"CSS3"
+		],
+		"projectImage1": "AddToBasket1.png",
+		"projectImage2": "AddToBasket2.png",
+		"projectURL": "https://kumarharsh13.github.io/add-to-basket/",
+		"repoURL": "https://github.com/kumarharsh13/add-to-basket"
+	},
+	{
+		"projectTitle": "Portfolio Website",
+		"description": "Developed a full-stack web application for food delivery, allowing users to place orders, update personal details, and view order history. The application also includes an admin portal for tracking order status and adding new cuisines.",
+		"technologiesUsed": [
+			"HTML5",
+			"CSS3",
+			"JavaScript",
+			"Bootstrap",
+			"MySQL",
+			"EJS",
+			"ExpressJS"
+		],
+		"projectImage1": "FoodOrderingWebsite1.png",
+		"projectImage2": "FoodOrderingWebsite2.png",
+		"projectURL": "",
+		"repoURL": "https://github.com/kumarharsh13/portfolio-website"
+	},
+	{
 		"projectTitle": "Yog Aasan",
 		"description": "Designed and developed a visually appealing landing page for a yoga school, focusing on user engagement and providing essential information about classes, packages and instructors",
 		"technologiesUsed": [
@@ -45,18 +74,6 @@
 		"repoURL": "https://github.com/kumarharsh13/Course-Management-System"
 	},
 	{
-		"projectTitle": "Add to Basket",
-		"description": "Add to Basket is a React-based cart application designed to practice and implement essential cart functionalities. This project focuses on key features such as adding, deleting, and updating items within the cart. It provides hands-on experience with managing state and user interactions in a React application.",
-		"technologiesUsed": [
-			"ReactJS",
-			"CSS3"
-		],
-		"projectImage1": "AddToBasket1.png",
-		"projectImage2": "AddToBasket2.png",
-		"projectURL": "https://kumarharsh13.github.io/add-to-basket/",
-		"repoURL": "https://github.com/kumarharsh13/add-to-basket"
-	},
-	{
 		"projectTitle": "N-Queen Puzzle Game",
 		"description": "N-Queen Puzzle Game is a puzzle game based on the 8-Queen Puzzle/Problem. It is a game in which we can solve the N Queen Problem for a grid or a chessboard of size N * N.",
 		"technologiesUsed": [
@@ -68,22 +85,5 @@
 		"projectImage2": "NQueenPuzzleGame2.png",
 		"projectURL": "https://kumarharsh13.github.io/N-Queen-Puzzle-Game/",
 		"repoURL": "https://github.com/kumarharsh13/N-Queen-Puzzle-Game"
-	},
-	{
-		"projectTitle": "Food Ordering Website",
-		"description": "Developed a full-stack web application for food delivery, allowing users to place orders, update personal details, and view order history. The application also includes an admin portal for tracking order status and adding new cuisines.",
-		"technologiesUsed": [
-			"HTML5",
-			"CSS3",
-			"JavaScript",
-			"Bootstrap",
-			"MySQL",
-			"EJS",
-			"ExpressJS"
-		],
-		"projectImage1": "FoodOrderingWebsite1.png",
-		"projectImage2": "FoodOrderingWebsite2.png",
-		"projectURL": "",
-		"repoURL": "https://github.com/kumarharsh13/Food-Ordering-Website"
 	}
 ]

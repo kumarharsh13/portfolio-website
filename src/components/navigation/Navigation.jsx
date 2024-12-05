@@ -4,7 +4,7 @@ function Navigation() {
   return (
     <nav className={styles.navigation}>
       <div className={styles.navMenuContainer}>
-        <div className={styles.log}>HK</div>
+        <div className={styles.logo}>HK</div>
         <div className={styles.navItems}>
           <ul className={styles.navItemList}>
             <li>Home</li>
@@ -12,6 +12,7 @@ function Navigation() {
             <li>Projects</li>
             <li>Certificates</li>
             <li>Contact</li>
+            <li><button className={styles.hireMe}>Hire Me</button></li>
           </ul>
         </div>
       </div>
