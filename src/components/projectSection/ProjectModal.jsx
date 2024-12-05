@@ -1,4 +1,6 @@
 import styles from "../projectSection/ProjectModal.module.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faX } from "@fortawesome/free-solid-svg-icons";
 import FoodOrderingWebsiteImage1 from "../../resources/images/FoodOrderingWebsite1.png";
 import FoodOrderingWebsiteImage2 from "../../resources/images/FoodOrderingWebsite2.png";
 import YogaAasanImage1 from "../../resources/images/YogaAasan1.png";
@@ -61,7 +63,7 @@ function ProjectModal({ project, onClose }) {
 						</button>
 					</a>
 				</div>
-				<button className={styles.closeButton}>❌</button>
+				<h4><FontAwesomeIcon icon={faX} className={styles.closeButton} /></h4>
 			</div>
     </div>
   );

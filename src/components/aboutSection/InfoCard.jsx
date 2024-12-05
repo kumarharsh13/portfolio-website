@@ -4,6 +4,8 @@ import yabxLogo from "../../resources/icons/yabx.svg";
 import comvivaLogo from "../../resources/icons/comviva.png";
 import nitrrLogo from "../../resources/icons/nitrr.png";
 import maismLogo from "../../resources/icons/maism.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 const logos = {
   "yabx.svg": yabxLogo,
@@ -57,7 +59,17 @@ function DataCard({ info }) {
             {info.startDate} - {info.endDate}
           </span>
         </h4>
-        <p>{info.location ? "📍" + info.location : info.description}</p>
+        <p>
+          {/* Proper rendering of location with the icon */}
+          {info.location ? (
+            <>
+              <FontAwesomeIcon icon={faLocationDot} className={styles.locationIcon} />&nbsp;
+              {info.location}
+            </>
+          ) : (
+            info.description
+          )}
+        </p>
       </div>
     </div>
   );

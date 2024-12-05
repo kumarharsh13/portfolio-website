@@ -3,13 +3,15 @@ import styles from "../heroSection/HeroSection.module.css";
 
 import Yoga from "../../resources/images/Yoga.png";
 import TechnologyContainer from "./TechnologyContainer";
+import TypeWriter from 'typewriter-effect';
 
 function HeroSection() {
   return (
     <div className={styles.heroSection}>
       <div className={styles.intro}>
-        <p>Hi 👋🏻, I'm HARSH KUMAR</p>
-        <p>A Software Engineer</p>
+        <p><h5>Hi 👋🏻 Myself</h5><h1>HARSH KUMAR</h1></p>
+        <h3><TypeWriter options={{strings: ['Software Engineer', 'Observer', 'Thinker', 'Enthusiast'], autoStart: true, loop: true, delay: 60, deleteSpeed: 10}} /></h3>
+        <a href="../../resources/pdf/Harsh Kumar Resume.pdf" download="Harsh Kumar Resume.pdf"><button className={styles.resume}>View Resume</button></a>
       </div>
       <div className={styles.techSkills}>
         <TechnologyContainer />

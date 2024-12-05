@@ -12,7 +12,15 @@ function Navigation() {
             <li>Projects</li>
             <li>Certificates</li>
             <li>Contact</li>
-            <li><button className={styles.hireMe}>Hire Me</button></li>
+            <li>
+              <a
+                href="mailto:kr.harsh13@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className={styles.hireMe}>Hire Me</button>
+              </a>
+            </li>
           </ul>
         </div>
       </div>

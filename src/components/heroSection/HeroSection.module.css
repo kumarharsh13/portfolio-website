@@ -8,6 +8,40 @@
   background-image: linear-gradient(to bottom, var(--lavender), var(--medium-lavender), var(--light-lavender), var(--neutral-white));
 }
 
+.intro h1{
+  font-size: 3em;
+  text-shadow: 4px 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.intro h3{
+  font-size: 2em;
+  text-shadow: 4px 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.intro h5{
+  font-size: 1.5em;
+  text-shadow: 4px 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.resume {
+  margin-top: 0.4rem;
+  background-color: var(--deep-purple);
+  font-size: 1rem;
+  color: white;
+  font-weight: 400;
+  padding: 0.8rem;
+	border-radius: 10px;
+  border: none;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.resume:hover {
+  color: black;
+  font-weight: 400;
+}
+.techContainer {
+  padding-top: 2rem;
+}
+
 .yogaMan {
   position: absolute;
   top: 50%;

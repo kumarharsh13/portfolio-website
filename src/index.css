@@ -18,6 +18,5 @@
 
 body {
   background-color: var(--light-lavender);
+  overflow-x: hidden;
 }
-
-

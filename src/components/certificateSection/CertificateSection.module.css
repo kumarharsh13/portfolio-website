@@ -1,0 +1,77 @@
+.certificateSection {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  gap: 1.5rem;
+  padding-right: 4rem;
+  padding-bottom: 6rem;
+  background: var(--neutral-white);
+}
+
+.certificateSection h1 {
+  font-size: 3em;
+  text-shadow: 4px 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.certificateCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  perspective: 1000px;
+  position: relative;
+  cursor: pointer;
+  margin: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+  width: 30vw;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: background-image 3s ease;
+}
+
+.certificateCard img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.certificateCard img:hover {
+  filter: blur(2px);
+  transform: scale(1.05);
+}
+
+.certificateInfo {
+  position: absolute;
+  text-align: justify;
+  white-space: normal;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+  padding: 1rem;
+  background-image: linear-gradient(to top, var(--light-lavender), var(--neutral-white));
+  backdrop-filter: blur(200px);
+  opacity: 0.7;
+  transform: translateY(100%);
+  transition: transform 1s ease;
+}
+
+.content:hover {
+  z-index: 999;
+  transform: translateY(0);
+}
+
+.content:hover .certificateInfo {
+  transform: translateY(0);
+  display: block;
+  backdrop-filter: blur(200px);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}

@@ -33,6 +33,7 @@ function ProjectSection() {
 
   return (
     <div className={styles.projectSection}>
+      <h1>Projects</h1>
       <Marquee speed={120} pauseOnHover={true} direction="left" autoFill={true}>
         {projects.map((project, index) => (
           <DataCard
