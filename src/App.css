@@ -17,5 +17,5 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-	background: var(--light-lavender);
+	background: var(--lavender);
 }
