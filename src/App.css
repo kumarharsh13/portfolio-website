@@ -1,21 +1,33 @@
+section {
+  opacity: 0;
+  transform: translateY(100px); /* Make the section appear to be pushed down */
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out; /* Smooth transition */
+}
+
+/* When the section comes into view, it becomes fully visible and slides up */
+section.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* width */
 ::-webkit-scrollbar {
-	width: 0.4rem;
+  width: 0.4rem;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 5px var(--deep-purple);
-	border-radius: 10px;
+  box-shadow: inset 0 0 5px var(--deep-purple);
+  border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: var(--deep-purple);
-	border-radius: 10px;
+  background: var(--deep-purple);
+  border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-	background: var(--lavender);
+  background: var(--lavender);
 }

@@ -7,7 +7,7 @@ import TypeWriter from 'typewriter-effect';
 
 function HeroSection() {
   return (
-    <div className={styles.heroSection}>
+    <div className={styles.heroSection} id="home">
       <div className={styles.intro}>
         <p><h5>Hi 👋🏻 Myself</h5><h1>HARSH KUMAR</h1></p>
         <h3><TypeWriter options={{strings: ['Software Engineer', 'Observer', 'Thinker', 'Enthusiast'], autoStart: true, loop: true, delay: 60, deleteSpeed: 10}} /></h3>

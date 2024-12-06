@@ -7,7 +7,7 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 function FooterSection() {
   return (
-    <div className={styles.footerSection}>
+    <div className={styles.footerSection} id="contact">
       <h1>Let's Connect</h1>
       <div className={styles.socialMedia}>
         <a
@@ -33,7 +33,8 @@ function FooterSection() {
         </a>
       </div>
       <div className={styles.createdBy}>
-        Crafted with <FontAwesomeIcon icon={faHeart} />
+        Crafted with{" "}
+        <FontAwesomeIcon icon={faHeart} className={styles.heartIcon} />
       </div>
       <div className={styles.copyright}>All rights reserved © 2025 </div>
     </div>

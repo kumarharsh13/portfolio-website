@@ -3,7 +3,8 @@
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   padding: 4rem;
   gap: 1.5rem;
   background: var(--neutral-white);
@@ -114,22 +115,28 @@
   cursor: not-allowed;
 }
 
-/* Ensure mobile responsiveness */
-@media (max-width: 768px) {
-  .projectSection {
-    padding: 2rem;
+@media (max-width: 64em) {
+  .projectInner {
+    height: 35vh;
   }
+}
 
-  .projectCard {
-    margin-top: 1.5rem;
+@media (max-width: 48em) {
+  .projectSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .projectInner {
-    width: 100%;
-    height: auto;
+    height: 45vh;
   }
+}
 
-  .readMoreBtn {
-    font-size: 1rem;
+@media (max-width: 30em) {
+  .projectInner {
+    width: 70vw;
+    height: 48vh;
   }
 }

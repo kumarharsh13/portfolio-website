@@ -1,5 +1,6 @@
 import projects from "../../resources/data/projects.json";
 import styles from "../projectSection/ProjectSection.module.css";
+import Marquee from "react-fast-marquee";
 
 import { useState } from "react";
 import ProjectModal from "./ProjectModal";
@@ -9,8 +10,7 @@ import YogaAasanImage1 from "../../resources/images/YogaAasan1.png";
 import CourseManagementSystemImage1 from "../../resources/images/CourseManagementSystem1.png";
 import AddToBasketImage1 from "../../resources/images/AddToBasket1.png";
 import NQueenPuzzleGameImage1 from "../../resources/images/NQueenPuzzleGame1.png";
-import Marquee from "react-fast-marquee";
-// import FoodOrderingWebsiteImage1 from "../../resources/images/FoodOrderingWebsite1.png"
+import PortfolioWebsite1 from "../../resources/images/PortfolioWebsite1.png"
 
 const images = {
   "FoodOrderingWebsite1.png": FoodOrderingWebsiteImage1,
@@ -18,6 +18,7 @@ const images = {
   "CourseManagementSystem1.png": CourseManagementSystemImage1,
   "AddToBasket1.png": AddToBasketImage1,
   "NQueenPuzzleGame1.png": NQueenPuzzleGameImage1,
+  "PortfolioWebsite1.png": PortfolioWebsite1,
 };
 
 function ProjectSection() {
@@ -32,7 +33,7 @@ function ProjectSection() {
   };
 
   return (
-    <div className={styles.projectSection}>
+    <div className={styles.projectSection} id="projects">
       <h1>Projects</h1>
       <Marquee speed={120} pauseOnHover={true} direction="left" autoFill={true}>
         {projects.map((project, index) => (

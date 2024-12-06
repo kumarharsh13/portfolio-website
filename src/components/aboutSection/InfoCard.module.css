@@ -13,27 +13,27 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-direction: row; /* Default to row, will be changed dynamically */
-  width: 100%; /* Ensure full width is used */
+  flex-direction: row; 
+  width: 100%;
   box-sizing: border-box;
   padding: 2rem;
-  gap: 2rem; /* Space between the image and content */
+  gap: 2rem;
 }
 
 .imageContainer {
-  width: 50%; /* Set width for image container */
+  width: 50%; 
   display: flex;
-  justify-content: center; /* Center the image */
+  justify-content: center;
 }
 
 .imageContainer img {
-  width: 100%; /* Ensure image takes up full container width */
-  max-width: 30rem; /* Optional: prevent image from becoming too large */
-  object-fit: cover; /* Keep aspect ratio intact */
+  width: 100%; 
+  max-width: 30rem; 
+  object-fit: cover; 
 }
 
 .infoContainer {
-  width: 70%; /* Allow content to take up remaining space */
+  width: 70%;
   display: flex;
   flex-direction: column;
 }
@@ -42,14 +42,14 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 100%; /* Full width within infoContainer */
+  width: 100%; 
   padding-left: 2rem;
-  margin: 1rem 0; /* Adjust vertical margin */
+  margin: 1rem 0; 
   box-sizing: border-box;
 }
 
 .logo {
-  width: 20%; /* Logo width */
+  width: 20%;
   height: auto;
   padding: 2rem;
 }
@@ -57,45 +57,71 @@
 .details {
   display: flex;
   flex-direction: column;
-  margin-left: 1rem; /* Space between logo and details */
+  margin-left: 1rem;
 }
 
 .details p {
   text-align: justify;
-  margin-top: 0.5rem; /* Space between description and other elements */
+  margin-top: 0.5rem; 
 }
 
 .companyTenure {
   display: flex;
-  justify-content: space-between; /* Space between company and tenure */
+  justify-content: space-between; 
   align-items: center;
-  margin-top: 0.5rem; /* Space between job title and company info */
+  margin-top: 0.5rem; 
 }
 
-/* Responsive styles for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 64em) {
+  .logo {
+    width: 40%;
+  }
+}
+
+@media (max-width: 48em) {
   .infoCard {
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
     align-items: center;
   }
 
   .imageContainer {
-    width: 100%; /* Image container takes full width */
-    margin-bottom: 1rem; /* Space between image and content */
+    width: 100%; 
+    margin-bottom: 1rem; 
   }
 
   .infoContainer {
-    width: 100%; /* Content takes full width */
+    width: 100%; 
   }
 
   .dataCard {
-    width: 100%; /* Ensure cards take full width */
+    width: 100%;
     padding: 10px;
-    flex-direction: column; /* Stack content vertically in card */
+    flex-direction: column;
   }
 
   .logo {
-    width: 40%; /* Larger logos on smaller screens */
+    width: 40%;
     padding: 1rem;
+  }
+}
+
+@media (max-width: 30em) {
+
+  .infoCard {
+    display: flex;
+    flex-direction: column !important; 
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dataCard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-self: center;
+  }
+
+  .logo {
+    width: 50%;
   }
 }

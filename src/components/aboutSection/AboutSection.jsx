@@ -8,7 +8,7 @@ import InfoCard from "./InfoCard";
 
 function AboutSection() {
   return (
-    <div className={styles.aboutSection}>
+    <div className={styles.aboutSection} id="about">
       <h1>About</h1>
       <div>
         <InfoCard infoCardDetails={careerData} infoImage={careerImage} />

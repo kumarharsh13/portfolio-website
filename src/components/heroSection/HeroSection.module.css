@@ -72,3 +72,66 @@
   height: auto;
   margin-left: -20rem;
 }
+
+.techIcon img {
+  width: 100%;
+}
+
+@media (max-width: 64em) {
+  .heroSection{
+    margin-top: -10rem;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .yogaMan, .techContainer {
+    left: 50%;
+  }
+
+  .intro, .intro p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 48em) {
+  .heroSection{
+    margin-top: -2rem;
+  }
+  
+  .techContainer {
+    margin-top: -8rem;
+  }
+
+  .yogaManImage {
+    margin-top: -10rem;
+    width: 20rem;
+  }
+
+  .techIcon {
+    width: 3.5em;
+    margin: -12rem;
+  }
+}
+
+@media (max-width: 30em) {
+  .heroSection{
+    margin-top: 0rem;
+  }
+
+  .yogaManImage {
+    width: 16rem;
+  }
+
+  .techIcon {
+    width: 3.5em;
+    margin: -9.2rem;
+  }
+}

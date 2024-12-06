@@ -32,7 +32,7 @@ const images = {
 
 function CertificateSection() {
   return (
-    <div className={styles.certificateSection}>
+    <div className={styles.certificateSection} id="certificates">
 			<h1>Certificates</h1>
       <Marquee
         speed={120}

@@ -30,19 +30,14 @@
 	},
 	{
 		"projectTitle": "Portfolio Website",
-		"description": "Developed a full-stack web application for food delivery, allowing users to place orders, update personal details, and view order history. The application also includes an admin portal for tracking order status and adding new cuisines.",
+		"description": "This portfolio showcases my skills, experience, and projects with smooth navigation and responsive design. Built with React, it offers a seamless user experience and highlights my work, certifications, and contact info",
 		"technologiesUsed": [
-			"HTML5",
 			"CSS3",
-			"JavaScript",
-			"Bootstrap",
-			"MySQL",
-			"EJS",
-			"ExpressJS"
+			"ReactJS"
 		],
-		"projectImage1": "FoodOrderingWebsite1.png",
-		"projectImage2": "FoodOrderingWebsite2.png",
-		"projectURL": "",
+		"projectImage1": "PortfolioWebsite1.png",
+		"projectImage2": "PortfolioWebsite2.png",
+		"projectURL": "https://kumarharsh13.github.io/portfolio-website/",
 		"repoURL": "https://github.com/kumarharsh13/portfolio-website"
 	},
 	{

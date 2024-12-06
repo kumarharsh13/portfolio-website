@@ -1,12 +1,14 @@
+/* General Styles for the Navigation Bar */
 .navigation {
   background-color: transparent;
-  backdrop-filter: blur(20px); 
+  backdrop-filter: blur(20px);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; 
+  z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
 }
 
 .navigation::after {
@@ -23,50 +25,119 @@
 .navMenuContainer {
   padding: 1.2rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
 .logo {
+  margin-left: 4rem;
+  font-family: "Pacifico", cursive;
   font-size: 2rem;
   font-weight: bold;
   text-shadow: 4px 6px 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.navItems {
+  display: flex;
+  align-items: center;
 }
 
 .navItemList {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0;  
-  padding: 0;  
+  margin: 0;
+  padding: 0;
 }
 
 .navItemList li {
   list-style: none;
   margin-left: 2rem;
-  font-size: 1.1rem; 
-  cursor: pointer; 
+  cursor: pointer;
+  font-size: 1.1rem;
+  position: relative;
+  font-weight: 500;
 }
 
 .navItemList li:first-child {
-  margin-left: 0; 
+  margin-left: 0;
 }
 
-.navItemList li:hover {
-  text-decoration: underline; 
+.navItemList li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navItemList li.active {
+  padding: 0.8rem;
+  background-color: var(--deep-purple);
+  color: var(--neutral-white);
+  border-radius: 10px;
+  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .hireMe {
   background-color: var(--deep-purple);
   color: var(--neutral-white);
+  border: none;
+  cursor: pointer;
   font-weight: 400;
   padding: 0.8rem;
-	border-radius: 10px;
-  border: none;
+  border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .hireMe:hover {
-  color: black;
+  background-color: #e5533f;
   font-weight: 400;
+}
+
+.navigation.sticky {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hamburger Icon */
+.hamburgerIcon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 999999999;
+}
+
+/* Mobile Styles */
+@media (max-width: 48em) {
+  .navItems {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    position: fixed;
+    margin-top: 15rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.825);
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .navItems.openMenu {
+    display: flex;
+  }
+
+  .navItemList {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .navItemList li {
+    margin-left: 0;
+  }
+
+  .hamburgerIcon {
+    display: block;
+  }
 }

@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { motion } from "framer-motion";
 import styles from "../aboutSection/InfoCard.module.css";
 import yabxLogo from "../../resources/icons/yabx.svg";
 import comvivaLogo from "../../resources/icons/comviva.png";
@@ -28,13 +29,28 @@ function InfoCard({ infoCardDetails, infoImage, flexDirection = "row" }) {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        flexDirection: flexDirection, // This makes it dynamic based on prop
-        width: "100%", // Ensure it takes full width
+        flexDirection: flexDirection,
+        width: "100%",
         boxSizing: "border-box",
       }}
     >
       <div className={styles.imageContainer}>
-        <img src={infoImage} alt="Info visual representation" />
+      <motion.img
+            src={infoImage}
+            alt="Info visual representation"
+            className={styles.yogaManImage}
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 2, ease: "easeInOut" }}
+            whileInView={{
+              y: [0, -20, 0],
+              transition: {
+                duration: 2,
+                ease: "easeInOut",
+                repeat: Infinity,
+              },
+            }}
+          />
       </div>
       <div className={styles.infoContainer}>
         {infoCardDetails.map((info, index) => (

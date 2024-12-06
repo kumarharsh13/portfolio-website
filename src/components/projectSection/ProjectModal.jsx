@@ -11,6 +11,8 @@ import AddToBasketImage1 from "../../resources/images/AddToBasket1.png";
 import AddToBasketImage2 from "../../resources/images/AddToBasket2.png";
 import NQueenPuzzleGameImage1 from "../../resources/images/NQueenPuzzleGame1.png";
 import NQueenPuzzleGameImage2 from "../../resources/images/NQueenPuzzleGame2.png";
+import PortfolioWebsite1 from "../../resources/images/PortfolioWebsite1.png"
+import PortfolioWebsite2 from "../../resources/images/PortfolioWebsite2.png"
 
 const images = {
   "FoodOrderingWebsite1.png": FoodOrderingWebsiteImage1,
@@ -23,6 +25,8 @@ const images = {
   "AddToBasket2.png": AddToBasketImage2,
   "NQueenPuzzleGame1.png": NQueenPuzzleGameImage1,
   "NQueenPuzzleGame2.png": NQueenPuzzleGameImage2,
+  "PortfolioWebsite1.png": PortfolioWebsite1,
+  "PortfolioWebsite2.png": PortfolioWebsite2,
 };
 
 function ProjectModal({ project, onClose }) {
