@@ -16,7 +16,7 @@
 .projectModalContant {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
   background-image: linear-gradient(to top,
@@ -121,8 +121,8 @@
   }
 
   .projectImages img {
-    width: 20vw;
-    height: 10vh;
+    width: 30vw;
+    height: 20vh;
     border-radius: 1rem;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   }
