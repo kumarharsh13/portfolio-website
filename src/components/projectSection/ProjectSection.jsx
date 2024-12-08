@@ -65,7 +65,7 @@ function DataCard({ project, onClickReadMore }) {
             <img src={imageSrc} alt={project.projectTitle} />
           </div>
           <div className={styles.nameDescription}>
-            <h3 className={styles.name}>{project.projectTitle}</h3>
+            <h2 className={styles.name}>{project.projectTitle}</h2>
             <p className={styles.description}>{project.description}</p>
           </div>
         </div>

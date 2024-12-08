@@ -38,7 +38,7 @@ function ProjectModal({ project, onClose }) {
   return (
     <div className={styles.projectModal} onClick={onClose}>
       <div className={styles.projectModalContant}>
-			<h2 className={styles.name}>{project.projectTitle}</h2>
+			<h1 className={styles.name}>{project.projectTitle}</h1>
         <div className={styles.projectImages}>
           <img src={imageSrc1} alt="" />
           <img src={imageSrc2} alt="" />

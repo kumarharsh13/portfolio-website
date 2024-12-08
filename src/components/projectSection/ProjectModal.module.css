@@ -64,10 +64,12 @@
   border: none;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   padding: 0.5rem;
+  font-size: 1.5rem;
 }
 
 .description {
   text-align: justify;
+  font-size: 2rem;
 }
 
 .buttons {
@@ -81,6 +83,7 @@
   padding: 1rem;
   border-radius: 30px;
   font-weight: 700;
+  font-size: 1.5rem;
   background-color: var(--lavender);
   color: var(--neutral-white);
   border: none;
@@ -100,7 +103,7 @@
   position: absolute;
   top: 5%;
   left: 95%;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: 900;
   color: var(--medium-lavender);
 }
@@ -112,7 +115,7 @@
 @media (max-width: 64em) {
   .projectModalContant {
     width: 80%;
-    height: 80%;
+    height: 50%;
     padding: 1rem;
   }
 
@@ -122,7 +125,7 @@
 
   .projectImages img {
     width: 30vw;
-    height: 20vh;
+    height: 15vh;
     border-radius: 1rem;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   }
@@ -131,7 +134,7 @@
 @media (max-width: 48em) {
   .projectModalContant {
     width: 80%;
-    height: 60%;
+    height: 50%;
     padding: 1rem;
   }
 }

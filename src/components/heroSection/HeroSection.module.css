@@ -8,38 +8,36 @@
   background-image: linear-gradient(to bottom, var(--lavender), var(--medium-lavender), var(--light-lavender), var(--neutral-white));
 }
 
-.intro h1 {
+.intro h1{
+  font-size: 4em;
+  text-shadow: 4px 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.intro h3{
   font-size: 3em;
   text-shadow: 4px 6px 10px rgba(0, 0, 0, 0.4);
 }
 
-.intro h3 {
-  font-size: 2em;
-  text-shadow: 4px 6px 10px rgba(0, 0, 0, 0.4);
-}
-
-.intro h5 {
-  font-size: 1.5em;
+.intro h5{
+  font-size: 2.5em;
   text-shadow: 4px 6px 10px rgba(0, 0, 0, 0.4);
 }
 
 .resume {
   margin-top: 0.4rem;
   background-color: var(--deep-purple);
-  font-size: 1rem;
+  font-size: 2rem;
   color: white;
   font-weight: 400;
   padding: 0.8rem;
-  border-radius: 10px;
+	border-radius: 10px;
   border: none;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
-
 .resume:hover {
   color: black;
   font-weight: 400;
 }
-
 .techContainer {
   padding-top: 2rem;
 }
@@ -52,7 +50,7 @@
 }
 
 .yogaManImage {
-  width: 30rem;
+  width: 40rem;
   height: auto;
 }
 
@@ -70,9 +68,9 @@
 }
 
 .techIcon {
-  width: 4em;
+  width: 6rem;
   height: auto;
-  margin-left: -20rem;
+  margin-left: -26rem;
 }
 
 .techIcon img {
@@ -80,8 +78,8 @@
 }
 
 @media (max-width: 64em) {
-  .heroSection {
-    margin-top: -10rem;
+  .heroSection{
+    margin-top: -30rem;
     padding-bottom: 4rem;
     display: flex;
     flex-direction: column-reverse;
@@ -89,13 +87,11 @@
     justify-content: flex-start;
   }
 
-  .yogaMan,
-  .techContainer {
+  .yogaMan, .techContainer {
     left: 50%;
   }
 
-  .intro,
-  .intro p {
+  .intro, .intro p {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -106,36 +102,34 @@
 }
 
 @media (max-width: 48em) {
-  .heroSection {
+  .heroSection{
     margin-top: -2rem;
   }
-
+  
   .techContainer {
     margin-top: -8rem;
   }
 
   .yogaManImage {
     margin-top: -10rem;
-    width: 20rem;
   }
 
   .techIcon {
-    width: 3.5em;
-    margin: -12rem;
+    margin: -20rem;
   }
 }
 
 @media (max-width: 30em) {
-  .heroSection {
+  .heroSection{
     margin-top: 0rem;
   }
 
   .yogaManImage {
-    width: 16rem;
+    width: 30rem;
   }
 
   .techIcon {
-    width: 3.5em;
-    margin: -9.2rem;
+    width: 6rem;
+    margin: -15rem;
   }
 }

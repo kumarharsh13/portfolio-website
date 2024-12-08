@@ -75,7 +75,7 @@ function DataCard({ info }) {
             {info.startDate} - {info.endDate}
           </span>
         </h4>
-        <p>
+        <p className={styles.description}>
           {/* Proper rendering of location with the icon */}
           {info.location ? (
             <>
