@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio-website/static/css/main.4beeb0ed.css",
-    "main.js": "/portfolio-website/static/js/main.86eaeeb7.js",
+    "main.css": "/portfolio-website/static/css/main.792ac042.css",
+    "main.js": "/portfolio-website/static/js/main.fe82d66d.js",
     "static/media/CourseManagementSystem1.png": "/portfolio-website/static/media/CourseManagementSystem1.0ff2ebbcc8bd9437d766.png",
     "static/media/CourseManagementSystem2.png": "/portfolio-website/static/media/CourseManagementSystem2.7a7ffb9611f282cfc2db.png",
     "static/media/NQueenPuzzleGame1.png": "/portfolio-website/static/media/NQueenPuzzleGame1.815a3e40db01b6b39412.png",
@@ -43,11 +43,11 @@
     "static/media/rails.png": "/portfolio-website/static/media/rails.93a9e72cde4e9bb9fa74.png",
     "static/media/yabx.svg": "/portfolio-website/static/media/yabx.4ef1c14ea911fd54211e4edae8838751.svg",
     "index.html": "/portfolio-website/index.html",
-    "main.4beeb0ed.css.map": "/portfolio-website/static/css/main.4beeb0ed.css.map",
-    "main.86eaeeb7.js.map": "/portfolio-website/static/js/main.86eaeeb7.js.map"
+    "main.792ac042.css.map": "/portfolio-website/static/css/main.792ac042.css.map",
+    "main.fe82d66d.js.map": "/portfolio-website/static/js/main.fe82d66d.js.map"
   },
   "entrypoints": [
-    "static/css/main.4beeb0ed.css",
-    "static/js/main.86eaeeb7.js"
+    "static/css/main.792ac042.css",
+    "static/js/main.fe82d66d.js"
   ]
 }
