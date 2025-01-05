@@ -1,5 +1,21 @@
 [
 	{
+		"projectTitle": "Chhavi Anvaya",
+		"description": "This project is a fully-functional social media platform. Allowing users to engage with content, other users, and share posts. The platform includes functionalities such as liking, commenting, following/unfollowing, posting images.",
+		"technologiesUsed": [
+			"ReactJs",
+			"ExpressJs",
+			"PostgreSQL",
+			"HTML5",
+			"CSS3",
+			"JavaScript"
+		],
+		"projectImage1": "ChhaviAnvaya1.png",
+		"projectImage2": "ChhaviAnvaya2.png",
+		"projectURL": "",
+		"repoURL": "https://github.com/kumarharsh13/chhavi-anvaya"
+	},
+	{
 		"projectTitle": "Food Ordering Website",
 		"description": "Developed a full-stack web application for food delivery, allowing users to place orders, update personal details, and view order history. The application also includes an admin portal for tracking order status and adding new cuisines.",
 		"technologiesUsed": [

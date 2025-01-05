@@ -5,6 +5,7 @@ import Marquee from "react-fast-marquee";
 import { useState } from "react";
 import ProjectModal from "./ProjectModal";
 
+import ChhaviAnvayaImage1 from "../../resources/images/ChhaviAnvaya1.png"
 import FoodOrderingWebsiteImage1 from "../../resources/images/FoodOrderingWebsite1.png";
 import YogaAasanImage1 from "../../resources/images/YogaAasan1.png";
 import CourseManagementSystemImage1 from "../../resources/images/CourseManagementSystem1.png";
@@ -13,6 +14,7 @@ import NQueenPuzzleGameImage1 from "../../resources/images/NQueenPuzzleGame1.png
 import PortfolioWebsite1 from "../../resources/images/PortfolioWebsite1.png"
 
 const images = {
+  "ChhaviAnvaya1.png": ChhaviAnvayaImage1,
   "FoodOrderingWebsite1.png": FoodOrderingWebsiteImage1,
   "YogaAasan1.png": YogaAasanImage1,
   "CourseManagementSystem1.png": CourseManagementSystemImage1,

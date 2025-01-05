@@ -1,6 +1,8 @@
 import styles from "../projectSection/ProjectModal.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faX } from "@fortawesome/free-solid-svg-icons";
+import ChhaviAnvayaImage1 from "../../resources/images/ChhaviAnvaya1.png"
+import ChhaviAnvayaImage2 from "../../resources/images/ChhaviAnvaya2.png"
 import FoodOrderingWebsiteImage1 from "../../resources/images/FoodOrderingWebsite1.png";
 import FoodOrderingWebsiteImage2 from "../../resources/images/FoodOrderingWebsite2.png";
 import YogaAasanImage1 from "../../resources/images/YogaAasan1.png";
@@ -15,6 +17,8 @@ import PortfolioWebsite1 from "../../resources/images/PortfolioWebsite1.png"
 import PortfolioWebsite2 from "../../resources/images/PortfolioWebsite2.png"
 
 const images = {
+  "ChhaviAnvaya1.png": ChhaviAnvayaImage1,
+  "ChhaviAnvaya2.png": ChhaviAnvayaImage2,
   "FoodOrderingWebsite1.png": FoodOrderingWebsiteImage1,
   "FoodOrderingWebsite2.png": FoodOrderingWebsiteImage2,
   "YogaAasan1.png": YogaAasanImage1,
