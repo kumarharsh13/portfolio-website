@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio-website/static/css/main.792ac042.css",
-    "main.js": "/portfolio-website/static/js/main.4f1a8bdb.js",
+    "main.js": "/portfolio-website/static/js/main.58ed2a74.js",
     "static/media/CourseManagementSystem1.png": "/portfolio-website/static/media/CourseManagementSystem1.0ff2ebbcc8bd9437d766.png",
     "static/media/CourseManagementSystem2.png": "/portfolio-website/static/media/CourseManagementSystem2.7a7ffb9611f282cfc2db.png",
     "static/media/NQueenPuzzleGame1.png": "/portfolio-website/static/media/NQueenPuzzleGame1.815a3e40db01b6b39412.png",
@@ -46,10 +46,10 @@
     "static/media/yabx.svg": "/portfolio-website/static/media/yabx.4ef1c14ea911fd54211e4edae8838751.svg",
     "index.html": "/portfolio-website/index.html",
     "main.792ac042.css.map": "/portfolio-website/static/css/main.792ac042.css.map",
-    "main.4f1a8bdb.js.map": "/portfolio-website/static/js/main.4f1a8bdb.js.map"
+    "main.58ed2a74.js.map": "/portfolio-website/static/js/main.58ed2a74.js.map"
   },
   "entrypoints": [
     "static/css/main.792ac042.css",
-    "static/js/main.4f1a8bdb.js"
+    "static/js/main.58ed2a74.js"
   ]
 }
