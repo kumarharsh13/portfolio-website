@@ -10,7 +10,7 @@ function HeroSection() {
     <div className={styles.heroSection} id="home">
       <div className={styles.intro}>
         <p><h5>Hi 👋🏻 Myself</h5><h1>HARSH KUMAR</h1></p>
-        <h3><TypeWriter options={{strings: ['Software Engineer', 'Observer', 'Thinker', 'Enthusiast'], autoStart: true, loop: true, delay: 60, deleteSpeed: 10}} /></h3>
+        <h3><TypeWriter options={{strings: ['Senior Software Engineer', 'Observer', 'Thinker', 'Enthusiast'], autoStart: true, loop: true, delay: 60, deleteSpeed: 10}} /></h3>
         <a href="../../resources/pdf/Harsh Kumar Resume.pdf" download="Harsh Kumar Resume.pdf"><button className={styles.resume}>View Resume</button></a>
       </div>
       <div className={styles.techSkills}>

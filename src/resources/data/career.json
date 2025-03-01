@@ -1,9 +1,17 @@
 [
 	{
+		"jobTitle": "Senior Software Engineer",
+		"company": "YABX",
+		"startDate": "Dec-2024",
+		"endDate": "Present",
+		"logo": "yabx.svg",
+		"description": "Experienced Full-Stack Ruby on Rails Developer with a strong background in integrating and optimizing loan management systems. Successfully implemented RabbitMQ for efficient message queuing, enhancing system performance and real-time credit limit generation. Spearheaded a multi-feature integration to streamline workflows and ensure accurate calculations based on dynamic data inputs. Automated the reconciliation process, reducing manual effort by 85% while improving accuracy. Developed and maintained key sub-modules, ensuring scalability and timely delivery. Proactively debugged and resolved production issues, reviewed code, and mentored team members to enhance overall system stability and team efficiency."    
+	},
+	{
 		"jobTitle": "Software Engineer",
 		"company": "YABX",
 		"startDate": "Aug-2023",
-		"endDate": "Present",
+		"endDate": "Dec-2024",
 		"logo": "yabx.svg",
 		"description": "Experienced software engineer with a comprehensive background in Ruby on Rails (RoR), with expertise in optimizing application performance, developing and integrating APIs, and enhancing user interfaces (UI). Skilled in creating seamless, intuitive UIs while also focusing on backend performance and system reliability. Proven ability to troubleshoot complex issues, implement code fixes, and deliver efficient, user-centric solutions that meet business needs."    
 	},
