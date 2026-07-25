@@ -1,19 +1,16 @@
 {
   "files": {
-    "main.css": "/portfolio-website/static/css/main.792ac042.css",
-    "main.js": "/portfolio-website/static/js/main.58ed2a74.js",
+    "main.css": "/portfolio-website/static/css/main.7e53d8d6.css",
+    "main.js": "/portfolio-website/static/js/main.4f008872.js",
+    "static/js/336.da89d69f.chunk.js": "/portfolio-website/static/js/336.da89d69f.chunk.js",
+    "static/js/760.a8e65cb3.chunk.js": "/portfolio-website/static/js/760.a8e65cb3.chunk.js",
+    "static/js/866.a3a50645.chunk.js": "/portfolio-website/static/js/866.a3a50645.chunk.js",
+    "static/js/995.3110e978.chunk.js": "/portfolio-website/static/js/995.3110e978.chunk.js",
+    "static/js/266.3acc8335.chunk.js": "/portfolio-website/static/js/266.3acc8335.chunk.js",
     "static/media/CourseManagementSystem1.png": "/portfolio-website/static/media/CourseManagementSystem1.0ff2ebbcc8bd9437d766.png",
-    "static/media/CourseManagementSystem2.png": "/portfolio-website/static/media/CourseManagementSystem2.7a7ffb9611f282cfc2db.png",
     "static/media/NQueenPuzzleGame1.png": "/portfolio-website/static/media/NQueenPuzzleGame1.815a3e40db01b6b39412.png",
-    "static/media/NQueenPuzzleGame2.png": "/portfolio-website/static/media/NQueenPuzzleGame2.a75ccc527603f97021ba.png",
-    "static/media/YogaAasan2.png": "/portfolio-website/static/media/YogaAasan2.aa56271046b9f4202c57.png",
-    "static/media/FoodOrderingWebsite2.png": "/portfolio-website/static/media/FoodOrderingWebsite2.01f98d7b458ade62291b.png",
-    "static/media/PortfolioWebsite2.png": "/portfolio-website/static/media/PortfolioWebsite2.9258cf729a1c2e28b4a8.png",
-    "static/media/AddToBasket2.png": "/portfolio-website/static/media/AddToBasket2.e3e17d8d0fc2f8ef303b.png",
     "static/media/AddToBasket1.png": "/portfolio-website/static/media/AddToBasket1.7f8d40e258c33e3e175f.png",
     "static/media/FoodOrderingWebsite1.png": "/portfolio-website/static/media/FoodOrderingWebsite1.e13663956a4373542e98.png",
-    "static/media/PortfolioWebsite1.png": "/portfolio-website/static/media/PortfolioWebsite1.532cbc435db31595068b.png",
-    "static/media/ChhaviAnvaya2.png": "/portfolio-website/static/media/ChhaviAnvaya2.2b99798974006125e143.png",
     "static/media/Yabx1.png": "/portfolio-website/static/media/Yabx1.a2a469ef1206c836454d.png",
     "static/media/YogaAasan1.png": "/portfolio-website/static/media/YogaAasan1.67a70ebcb33a0eaa442f.png",
     "static/media/ChhaviAnvaya1.png": "/portfolio-website/static/media/ChhaviAnvaya1.94a1121936456b44b4df.png",
@@ -28,7 +25,9 @@
     "static/media/Linux.png": "/portfolio-website/static/media/Linux.d220ff84a9f627dd4c59.png",
     "static/media/Studying.svg": "/portfolio-website/static/media/Studying.d0c1203e46e17a9e14babe2385d5511d.svg",
     "static/media/Working.svg": "/portfolio-website/static/media/Working.9f3287236407be55b8ce36f021d5a3e6.svg",
+    "static/media/Harsh Kumar Resume.pdf": "/portfolio-website/static/media/Harsh Kumar Resume.a81cd743019a192067d6.pdf",
     "static/media/nitrr.png": "/portfolio-website/static/media/nitrr.d18b215eb94337d29d8b.png",
+    "static/media/PortfolioWebsite1.png": "/portfolio-website/static/media/PortfolioWebsite1.8265ac8b61a12d33650f.png",
     "static/media/maism.png": "/portfolio-website/static/media/maism.8fb365236139d2aea9cc.png",
     "static/media/PersonalBranding.png": "/portfolio-website/static/media/PersonalBranding.cc37b81ced45a6b6614f.png",
     "static/media/InterpersonalCommunication.png": "/portfolio-website/static/media/InterpersonalCommunication.6766271d403768c3fe4e.png",
@@ -45,11 +44,16 @@
     "static/media/rails.png": "/portfolio-website/static/media/rails.93a9e72cde4e9bb9fa74.png",
     "static/media/yabx.svg": "/portfolio-website/static/media/yabx.4ef1c14ea911fd54211e4edae8838751.svg",
     "index.html": "/portfolio-website/index.html",
-    "main.792ac042.css.map": "/portfolio-website/static/css/main.792ac042.css.map",
-    "main.58ed2a74.js.map": "/portfolio-website/static/js/main.58ed2a74.js.map"
+    "main.7e53d8d6.css.map": "/portfolio-website/static/css/main.7e53d8d6.css.map",
+    "main.4f008872.js.map": "/portfolio-website/static/js/main.4f008872.js.map",
+    "336.da89d69f.chunk.js.map": "/portfolio-website/static/js/336.da89d69f.chunk.js.map",
+    "760.a8e65cb3.chunk.js.map": "/portfolio-website/static/js/760.a8e65cb3.chunk.js.map",
+    "866.a3a50645.chunk.js.map": "/portfolio-website/static/js/866.a3a50645.chunk.js.map",
+    "995.3110e978.chunk.js.map": "/portfolio-website/static/js/995.3110e978.chunk.js.map",
+    "266.3acc8335.chunk.js.map": "/portfolio-website/static/js/266.3acc8335.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.792ac042.css",
-    "static/js/main.58ed2a74.js"
+    "static/css/main.7e53d8d6.css",
+    "static/js/main.4f008872.js"
   ]
 }
