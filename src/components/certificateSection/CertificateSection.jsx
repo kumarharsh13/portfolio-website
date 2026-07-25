@@ -33,13 +33,8 @@ const images = {
 function CertificateSection() {
   return (
     <div className={styles.certificateSection} id="certificates">
-			<h1>Certificates</h1>
-      <Marquee
-        speed={120}
-        pauseOnHover={true}
-        direction="right"
-        autoFill={true}
-      >
+      <h1 className={styles.heading}>Certificates</h1>
+      <Marquee speed={60} pauseOnHover direction="right" autoFill>
         {certificates.map((certificate, index) => (
           <DataCard certificate={certificate} key={index} />
         ))}
@@ -50,15 +45,12 @@ function CertificateSection() {
 
 function DataCard({ certificate }) {
   const imageSrc = images[certificate.certificateImage] || null;
-
   return (
-    <div className={styles.certificateCard}>
-      <div className={styles.content}>
-        <img src={imageSrc} alt={certificate.certificateTitle} />
-        <div className={styles.certificateInfo}>
-          <h4>{certificate.certificateTitle}</h4>
-          <h5>{certificate.organisation}</h5>
-        </div>
+    <div className={styles.card}>
+      <img src={imageSrc} alt={certificate.certificateTitle} className={styles.thumb} />
+      <div className={styles.info}>
+        <h4 className={styles.title}>{certificate.certificateTitle}</h4>
+        <h5 className={styles.org}>{certificate.organisation}</h5>
       </div>
     </div>
   );

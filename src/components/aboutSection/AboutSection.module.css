@@ -1,0 +1,43 @@
+.aboutSection {
+  min-height: 100vh; width: 100%;
+  padding: 8rem 2rem; background: transparent;
+  display: flex; flex-direction: column; align-items: center;
+}
+.heading {
+  font-size: 4rem; margin-bottom: 4rem;
+  background: linear-gradient(90deg, var(--primary), var(--glow));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.expBlock {
+  width: 100%; max-width: 120rem;
+  display: flex; align-items: center; gap: 4rem;
+}
+.expDetails { flex: 1 1 55%; }
+
+.eduBlock {
+  width: 100%; max-width: 120rem;
+  margin-top: 5rem;
+  display: flex; align-items: center; gap: 4rem;
+}
+.eduDetails { flex: 1 1 55%; }
+
+.balanceImg {
+  flex: 1 1 45%;
+  width: 100%; max-width: 42rem;
+  filter: drop-shadow(0 0 40px rgba(138, 130, 251, 0.35));
+  animation: floatBalance 5s ease-in-out infinite;
+}
+
+@keyframes floatBalance {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+@media (max-width: 64em) {
+  .eduBlock { flex-direction: column; }
+  .balanceImg { max-width: 30rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .balanceImg { animation: none; }
+}

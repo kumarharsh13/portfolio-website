@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy } from 'react';
 
 import "./App.css";
 import Navigation from "../src/components/navigation/Navigation";
+import CanvasScene from "./components/three/CanvasScene";
 import HeroSection from "./components/heroSection/HeroSection";
 import AboutSection from "./components/aboutSection/AboutSection";
 import ProjectSection from "./components/projectSection/ProjectSection";
 import CertificateSection from "./components/certificateSection/CertificateSection";
 import FooterSection from "./components/footerSection/FooterSection";
+
+const HeroBackground = lazy(() => import("./components/three/HeroBackground"));
 
 function App() {
   const [inView, setInView] = useState('');
@@ -39,6 +42,11 @@ function App() {
 
   return (
     <div className="App">
+      <div className="globalBg">
+        <CanvasScene fallback={null} camera={{ position: [0, 0, 5], fov: 60 }}>
+          <HeroBackground />
+        </CanvasScene>
+      </div>
       <Navigation inView={inView} />
       <section id="home">
         <HeroSection />

@@ -1,88 +1,92 @@
-import projects from "../../resources/data/projects.json";
-import styles from "../projectSection/ProjectSection.module.css";
-import Marquee from "react-fast-marquee";
+import { lazy, useState } from 'react';
+import projects from '../../resources/data/projects.json';
+import styles from './ProjectSection.module.css';
+import CanvasScene from '../three/CanvasScene';
+import ProjectModal from './ProjectModal';
+import usePrefersReducedMotion from '../../hooks/usePrefersReducedMotion';
 
-import { useState } from "react";
-import ProjectModal from "./ProjectModal";
-
-import ChhaviAnvayaImage1 from "../../resources/images/ChhaviAnvaya1.png"
-import FoodOrderingWebsiteImage1 from "../../resources/images/FoodOrderingWebsite1.png";
-import YogaAasanImage1 from "../../resources/images/YogaAasan1.png";
-import CourseManagementSystemImage1 from "../../resources/images/CourseManagementSystem1.png";
-import AddToBasketImage1 from "../../resources/images/AddToBasket1.png";
-import NQueenPuzzleGameImage1 from "../../resources/images/NQueenPuzzleGame1.png";
-import PortfolioWebsite1 from "../../resources/images/PortfolioWebsite1.png"
+import ChhaviAnvaya1 from '../../resources/images/ChhaviAnvaya1.png';
+import FoodOrderingWebsite1 from '../../resources/images/FoodOrderingWebsite1.png';
+import YogaAasan1 from '../../resources/images/YogaAasan1.png';
+import CourseManagementSystem1 from '../../resources/images/CourseManagementSystem1.png';
+import AddToBasket1 from '../../resources/images/AddToBasket1.png';
+import NQueenPuzzleGame1 from '../../resources/images/NQueenPuzzleGame1.png';
+import PortfolioWebsite1 from '../../resources/images/PortfolioWebsite1.png';
 
 const images = {
-  "ChhaviAnvaya1.png": ChhaviAnvayaImage1,
-  "FoodOrderingWebsite1.png": FoodOrderingWebsiteImage1,
-  "YogaAasan1.png": YogaAasanImage1,
-  "CourseManagementSystem1.png": CourseManagementSystemImage1,
-  "AddToBasket1.png": AddToBasketImage1,
-  "NQueenPuzzleGame1.png": NQueenPuzzleGameImage1,
-  "PortfolioWebsite1.png": PortfolioWebsite1,
+  'ChhaviAnvaya1.png': ChhaviAnvaya1,
+  'FoodOrderingWebsite1.png': FoodOrderingWebsite1,
+  'YogaAasan1.png': YogaAasan1,
+  'CourseManagementSystem1.png': CourseManagementSystem1,
+  'AddToBasket1.png': AddToBasket1,
+  'NQueenPuzzleGame1.png': NQueenPuzzleGame1,
+  'PortfolioWebsite1.png': PortfolioWebsite1,
 };
 
+const ProjectGallery3D = lazy(() => import('../three/ProjectGallery3D'));
+
 function ProjectSection() {
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [active, setActive] = useState(0);
+  const [selected, setSelected] = useState(null);
+  const reduced = usePrefersReducedMotion();
 
-  const handleSelectProject = (project) => {
-    setSelectedProject(project);
-  };
-
-  const handleCloseModal = () => {
-    setSelectedProject(null);
-  };
+  const orderedImages = projects.map((p) => images[p.projectImage1]);
+  const prev = () => setActive((a) => Math.max(0, a - 1));
+  const next = () => setActive((a) => Math.min(projects.length - 1, a + 1));
 
   return (
     <div className={styles.projectSection} id="projects">
-      <h1>Projects</h1>
-      <Marquee speed={120} pauseOnHover={true} direction="left" autoFill={true}>
-        {projects.map((project, index) => (
-          <DataCard
-            project={project}
-            key={index}
-            onClickReadMore={() => handleSelectProject(project)}
+      <h1 className={styles.heading}>Projects</h1>
+
+      <div className={styles.stage}>
+        <CanvasScene
+          fallback={
+            <FallbackGrid
+              projects={projects}
+              images={images}
+              onSelect={setSelected}
+            />
+          }
+          camera={{ position: [0, 0, 7], fov: 45 }}
+        >
+          <ProjectGallery3D
+            images={orderedImages}
+            active={active}
+            onSelect={() => setSelected(projects[active])}
+            onFocus={setActive}
           />
-        ))}
-      </Marquee>
-
-      {/* Render the modal conditionally */}
-      {selectedProject && (
-        <ProjectModal project={selectedProject} onClose={handleCloseModal} />
-      )}
-    </div>
-  );
-}
-
-function DataCard({ project, onClickReadMore }) {
-  const imageSrc = images[project.projectImage1] || null;
-
-  return (
-    <div className={styles.projectCard}>
-      <div className={styles.projectInner}>
-        {/* Front of the Card */}
-        <div className={styles.projectFront}>
-          <div className={styles.projectImage}>
-            <img src={imageSrc} alt={project.projectTitle} />
-          </div>
-          <div className={styles.nameDescription}>
-            <h2 className={styles.name}>{project.projectTitle}</h2>
-            <p className={styles.description}>{project.description}</p>
-          </div>
-        </div>
-
-        {/* Back of the Card */}
-        <div className={styles.projectBack}>
-          <button
-            className={styles.readMoreBtn}
-            onClick={() => onClickReadMore(project)}
-          >
-            Read More
-          </button>
-        </div>
+        </CanvasScene>
       </div>
+
+      {!reduced && (
+        <>
+          <div className={styles.controls}>
+            <button onClick={prev} disabled={active === 0} className={styles.navBtn} aria-label="Previous project">‹</button>
+            <span className={styles.activeTitle}>{projects[active].projectTitle}</span>
+            <button onClick={next} disabled={active === projects.length - 1} className={styles.navBtn} aria-label="Next project">›</button>
+          </div>
+          <button className={styles.detailsBtn} onClick={() => setSelected(projects[active])}>
+            View Details
+          </button>
+        </>
+      )}
+
+      {selected && <ProjectModal project={selected} onClose={() => setSelected(null)} />}
     </div>
   );
 }
+
+function FallbackGrid({ projects, images, onSelect }) {
+  return (
+    <div className={styles.grid}>
+      {projects.map((p, i) => (
+        <button key={i} className={styles.gridCard} onClick={() => onSelect(p)}>
+          <img src={images[p.projectImage1]} alt={p.projectTitle} />
+          <span>{p.projectTitle}</span>
+        </button>
+      ))}
+    </div>
+  );
+}
+
 export default ProjectSection;

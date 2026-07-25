@@ -1,67 +1,57 @@
-import { motion } from "framer-motion";
-import styles from "../heroSection/HeroSection.module.css";
+import { lazy } from 'react';
+import styles from './TechnologyContainer.module.css';
+import CanvasScene from '../three/CanvasScene';
 
-import Html from "../../resources/icons/html.png";
-import Css from "../../resources/icons/css.png";
-import Javascript from "../../resources/icons/javascript.png";
-import NodeJS from "../../resources/icons/nodejs.png";
-import ReactJs from "../../resources/icons/reactjs.png";
-import Python from "../../resources/icons/python.png";
-import Cpp from "../../resources/icons/cpp.png";
-import Ruby from "../../resources/icons/ruby.png";
-import Rails from "../../resources/icons/rails.png";
-import MySql from "../../resources/icons/mysql.png";
-import Posgresql from "../../resources/icons/posgressql.png";
-import GitHub from "../../resources/icons/github.png";
-import Photoshop from "../../resources/icons/photoshop.png";
+import Html from '../../resources/icons/html.png';
+import Css from '../../resources/icons/css.png';
+import Javascript from '../../resources/icons/javascript.png';
+import NodeJS from '../../resources/icons/nodejs.png';
+import ReactJs from '../../resources/icons/reactjs.png';
+import Python from '../../resources/icons/python.png';
+import Cpp from '../../resources/icons/cpp.png';
+import Ruby from '../../resources/icons/ruby.png';
+import Rails from '../../resources/icons/rails.png';
+import MySql from '../../resources/icons/mysql.png';
+import Posgresql from '../../resources/icons/posgressql.png';
+import GitHub from '../../resources/icons/github.png';
+import Photoshop from '../../resources/icons/photoshop.png';
+
+const icons = [Html, Css, Javascript, NodeJS, ReactJs, Python, Cpp, Ruby, Rails, MySql, Posgresql, GitHub, Photoshop];
+
+const TechCloud = lazy(() => import('../three/TechCloud'));
+
+function FallbackGrid() {
+  return (
+    <div className={styles.grid}>
+      {icons.map((src, i) => (
+        <img key={i} src={src} alt="" className={styles.gridIcon} />
+      ))}
+    </div>
+  );
+}
 
 function TechnologyContainer() {
-  const technologies = [
-    { name: "htmlIcon", imgSrc: Html },
-    { name: "cssIcon", imgSrc: Css },
-    { name: "javascriptIcon", imgSrc: Javascript },
-    { name: "nodejslIcon", imgSrc: NodeJS },
-    { name: "reactjsIcon", imgSrc: ReactJs },
-    { name: "pythonIcon", imgSrc: Python },
-    { name: "cppIcon", imgSrc: Cpp },
-    { name: "rubyIcon", imgSrc: Ruby },
-    { name: "railsIcon", imgSrc: Rails },
-    { name: "mysqlIcon", imgSrc: MySql },
-    { name: "posgresqlIcon", imgSrc: Posgresql },
-    { name: "githubIcon", imgSrc: GitHub },
-    { name: "photoshopIcon", imgSrc: Photoshop },
-  ];
-
   return (
-    <div className={styles.techContainer}>
-      {technologies.map((tech, index) => {
-        const rotateAngle = index * (360 / 13);
-
-        return (
-          <div
-            key={index}
-            className={styles.icon}
-            style={{ transform: `rotate(${rotateAngle}deg)` }}
-          >
-            <motion.img
-              src={tech.imgSrc}
-              alt={tech.name}
-              className={styles.techIcon}
-              initial={{ scale: 0 }}
-              animate={{ scale: 1, rotate: -rotateAngle, y: [0, -10, 0] }}
-              transition={{ duration: 2, ease: "easeInOut" }}
-              whileInView={{
-                y: [0, -10, 0],
-                transition: {
-                  duration: 2,
-                  ease: "easeInOut",
-                  repeat: Infinity,
-                },
-              }}
-            />
-          </div>
-        );
-      })}
+    <div className={styles.techBand}>
+      <h1 className={styles.heading}>Tech Stack</h1>
+      <div className={styles.cloudWrap}>
+        {/*
+          CanvasScene itself returns `fallback` (unwrapped) whenever the
+          user prefers reduced motion OR (disableOnMobile && isMobile).
+          That already covers both "no 3D" cases, so we must NOT also
+          render a second, always-mounted grid next to it — doing so
+          would show two grids stacked on small screens. Relying solely
+          on this single fallback keeps exactly one grid visible in
+          every state.
+        */}
+        <CanvasScene
+          fallback={<FallbackGrid />}
+          disableOnMobile
+          camera={{ position: [0, 0, 7], fov: 45 }}
+        >
+          <TechCloud icons={icons} />
+        </CanvasScene>
+      </div>
     </div>
   );
 }

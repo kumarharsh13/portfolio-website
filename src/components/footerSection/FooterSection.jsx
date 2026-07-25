@@ -36,7 +36,7 @@ function FooterSection() {
         Crafted with{" "}
         <FontAwesomeIcon icon={faHeart} className={styles.heartIcon} />
       </div>
-      <div className={styles.copyright}>All rights reserved © 2025 </div>
+      <div className={styles.copyright}>All rights reserved © 2026 </div>
     </div>
   );
 }
