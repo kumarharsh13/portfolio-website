@@ -15,20 +15,32 @@ export default function Home({ paletteOpen }) {
   const [inView, setInView] = useState('');
 
   useEffect(() => {
-    const sections = document.querySelectorAll('section');
-    const observer = new IntersectionObserver(
+    const sections = Array.from(document.querySelectorAll('section'));
+
+    // Reveal: fire as soon as a section enters — threshold 0 so it works even
+    // when the section is far taller than the viewport (e.g. on mobile).
+    const reveal = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('in-view');
-            setInView(entry.target.id);
+            reveal.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0, rootMargin: '0px 0px -12% 0px' }
     );
-    sections.forEach((s) => observer.observe(s));
-    return () => sections.forEach((s) => observer.unobserve(s));
+
+    // Active section for the dock: whichever crosses a thin band at viewport middle.
+    const active = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => { if (entry.isIntersecting) setInView(entry.target.id); });
+      },
+      { threshold: 0, rootMargin: '-45% 0px -45% 0px' }
+    );
+
+    sections.forEach((s) => { reveal.observe(s); active.observe(s); });
+    return () => { reveal.disconnect(); active.disconnect(); };
   }, []);
 
   const scrollTo = (id) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
