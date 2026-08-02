@@ -1,7 +1,11 @@
 .topbar {
   position: fixed; top: 0; left: 0; right: 0; z-index: 800;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 1.8rem 2.6rem; pointer-events: none;
+  padding: 1.4rem 2.6rem;
+  background: rgba(8, 8, 10, 0.5);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border-bottom: 1px solid var(--line);
 }
 .topbar > * { pointer-events: auto; }
 
@@ -32,9 +36,26 @@
 .key {
   font-family: var(--font-body); font-size: 1.3rem; line-height: 1;
 }
+.cmdkKeys { display: inline-flex; align-items: center; gap: 0.4rem; }
+.cmdkIcon { display: none; font-size: 1.5rem; }
+
+.right { display: flex; align-items: center; gap: 1rem; }
+.resume {
+  display: inline-flex; align-items: center; gap: 0.7rem;
+  font-family: var(--font-head); font-size: 1.4rem; font-weight: 500; color: #fff;
+  padding: 0.7rem 1.3rem; border-radius: 10px; cursor: pointer;
+  background: linear-gradient(90deg, var(--accent-deep), var(--accent));
+  box-shadow: 0 0 16px rgba(138, 130, 251, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.resume:hover { transform: translateY(-1px); box-shadow: 0 0 24px rgba(34, 211, 238, 0.5); }
 
 @media (max-width: 44em) {
   .topbar { padding: 1.4rem 1.6rem; }
   .word { display: none; }
-  .cmdk { display: none; }
+  /* Phones have no ⌘K — show a tappable search icon that opens the menu. */
+  .cmdkKeys { display: none; }
+  .cmdkIcon { display: inline-flex; }
+  .resumeText { display: none; }
+  .right { gap: 0.8rem; }
 }

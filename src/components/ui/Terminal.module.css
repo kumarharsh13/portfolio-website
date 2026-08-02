@@ -17,3 +17,9 @@
 .inputLine { display: flex; align-items: center; }
 .input { flex: 1; background: transparent; border: none; color: var(--text); font: inherit; }
 .input:focus { outline: none; }
+
+.input::placeholder { color: rgba(139,139,150,0.6); }
+/* 16px prevents iOS from zooming when the terminal input is focused. */
+@media (max-width: 48em) {
+  .input { font-size: 16px; }
+}

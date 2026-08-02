@@ -83,3 +83,14 @@
 @media (max-width: 40em) {
   .row { flex-direction: column; }
 }
+
+.actions { display: flex; flex-wrap: wrap; gap: 1.2rem; align-items: center; justify-content: center; }
+.resumeBtn {
+  display: inline-flex; align-items: center; gap: 0.8rem;
+  font-family: var(--font-head); font-size: 1.5rem; font-weight: 500; color: #fff;
+  padding: 1rem 1.8rem; border-radius: 999px; cursor: pointer;
+  background: linear-gradient(90deg, var(--primary-deep), var(--primary));
+  box-shadow: 0 0 18px rgba(138,130,251,0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.resumeBtn:hover { transform: translateY(-2px); box-shadow: 0 0 26px rgba(34,211,238,0.5); }

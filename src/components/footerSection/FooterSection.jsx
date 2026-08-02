@@ -3,7 +3,8 @@ import styles from "../footerSection/FooterSection.module.css";
 import Magnetic from "../ui/Magnetic";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faHeart, faCopy, faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faHeart, faCopy, faCheck, faDownload } from "@fortawesome/free-solid-svg-icons";
+import Resume from "../../resources/resume/Harsh Kumar Resume.pdf";
 
 const EMAIL = "kr.harsh13@gmail.com";
 
@@ -60,10 +61,15 @@ function FooterSection() {
         </form>
       )}
 
-      <button className={styles.copyBtn} onClick={copyEmail}>
-        <FontAwesomeIcon icon={copied ? faCheck : faCopy} />
-        {copied ? "Copied!" : EMAIL}
-      </button>
+      <div className={styles.actions}>
+        <a href={Resume} download="Harsh Kumar Resume.pdf" className={styles.resumeBtn}>
+          <FontAwesomeIcon icon={faDownload} /> Download Résumé
+        </a>
+        <button className={styles.copyBtn} onClick={copyEmail}>
+          <FontAwesomeIcon icon={copied ? faCheck : faCopy} />
+          {copied ? "Copied!" : EMAIL}
+        </button>
+      </div>
 
       <div className={styles.socialMedia}>
         <a href={`mailto:${EMAIL}`} aria-label="Email"><FontAwesomeIcon icon={faEnvelope} /></a>

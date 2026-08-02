@@ -21,8 +21,11 @@ export default function Terminal() {
   ]);
   const [value, setValue] = useState('');
   const bodyRef = useRef(null);
+  const inputRef = useRef(null);
 
   useEffect(() => { if (bodyRef.current) bodyRef.current.scrollTop = bodyRef.current.scrollHeight; }, [history]);
+
+  const focusInput = () => inputRef.current?.focus();
 
   const run = (raw) => {
     const cmd = raw.trim().toLowerCase();
@@ -47,7 +50,7 @@ export default function Terminal() {
         <span className={styles.dotR} /><span className={styles.dotY} /><span className={styles.dotG} />
         <span className={styles.name}>harsh@portfolio</span>
       </div>
-      <div className={styles.body} ref={bodyRef}>
+      <div className={styles.body} ref={bodyRef} onClick={focusInput}>
         {history.map((h, i) => (
           <div key={i}>
             {h.cmd ? <div className={styles.cmdLine}><span className={styles.prompt}>$</span> {h.cmd}</div> : null}
@@ -57,12 +60,19 @@ export default function Terminal() {
         <div className={styles.inputLine}>
           <span className={styles.prompt}>$</span>
           <input
+            ref={inputRef}
             className={styles.input}
             value={value}
             onChange={(e) => setValue(e.target.value)}
             onKeyDown={onKeyDown}
+            type="text"
+            inputMode="text"
+            enterKeyHint="go"
             spellCheck="false"
             autoComplete="off"
+            autoCapitalize="none"
+            autoCorrect="off"
+            placeholder="type a command…"
             aria-label="Terminal input"
           />
         </div>
