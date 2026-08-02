@@ -1,18 +1,20 @@
 [
 	{
-		"degree": "Master of Computer Applicaitons",
+		"degree": "Master of Computer Applications",
 		"institution": "National Institute of Technology",
 		"location": "Raipur, Chhattisgarh",
 		"startDate": "2020",
 		"logo": "nitrr.png",
-		"endDate": "2023"
+		"endDate": "2023",
+		"score": "CGPA: 8.60"
 	},
 	{
-		"degree": "Bachelors of Computer Applications",
+		"degree": "Bachelor of Computer Applications",
 		"institution": "Maharishi Arvind Institute of Science & Management",
 		"location": "Jaipur, Rajasthan",
 		"startDate": "2016",
 		"logo": "maism.png",
-		"endDate": "2019"
+		"endDate": "2019",
+		"score": "Percentage: 72.66%"
 	}
 ]

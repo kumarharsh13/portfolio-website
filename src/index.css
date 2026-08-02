@@ -1,45 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;450;500;600&display=swap');
 
 :root {
-  --bg: #0a0a0f;
-  --bg-elev: #12121a;
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --blur: 14px;
-  --primary: #8a82fb;
-  --primary-deep: #5b4cb1;
-  --glow: #22d3ee;
-  --text: #f4f4f8;
-  --text-muted: #a1a1b5;
+  --bg: #08080a;
+  --bg-elev: #101014;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.14);
+  --text: #f4f4f6;
+  --muted: #8b8b96;
+  --accent: #8a82fb;
+  --accent-deep: #5b4cb1;
   --font-head: 'Space Grotesk', system-ui, sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
+  --radius: 14px;
+  --maxw: 108rem;
+
+  /* Back-compat aliases so not-yet-reframed sections keep rendering
+     until Phase 2 migrates them to the new tokens above. */
+  --primary: var(--accent);
+  --primary-deep: var(--accent-deep);
+  --glow: var(--accent);
+  --text-muted: var(--muted);
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: var(--line);
+  --blur: 14px;
 }
 
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-  scroll-padding-top: 7rem;
-}
+html { font-size: 62.5%; scroll-behavior: smooth; scroll-padding-top: 8rem; }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: var(--font-body);
-}
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: var(--font-body); }
 
-h1, h2, h3, h4, h5 { font-family: var(--font-head); }
+h1, h2, h3, h4, h5 { font-family: var(--font-head); font-weight: 600; letter-spacing: -0.01em; }
 
-body {
-  background-color: var(--bg);
-  color: var(--text);
-  overflow-x: hidden;
-}
+body { background-color: var(--bg); color: var(--text); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
 
-::-webkit-scrollbar { width: 0.4rem; }
-::-webkit-scrollbar-track { background: var(--bg-elev); }
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(var(--primary), var(--glow));
-  border-radius: 10px;
+a { color: inherit; text-decoration: none; }
+
+::-webkit-scrollbar { width: 0.5rem; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.22); }
+
+body.cursor-none, body.cursor-none * { cursor: none !important; }
+
+/* Cursor-aware cards: a radial highlight following the pointer, painted behind
+   the card content (z-index:-1 within an isolated stacking context). */
+.spot-card { position: relative; isolation: isolate; }
+.spot-card::before {
+  content: ''; position: absolute; inset: 0; border-radius: inherit; z-index: -1;
+  pointer-events: none; opacity: 0; transition: opacity 0.3s ease;
+  background: radial-gradient(18rem 18rem at var(--mx, 50%) var(--my, -100%),
+              rgba(138, 130, 251, 0.16), transparent 55%);
 }
-::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+.spot-card:hover::before { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .spot-card::before { display: none; } }

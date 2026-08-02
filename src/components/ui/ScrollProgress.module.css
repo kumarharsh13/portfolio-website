@@ -1,0 +1,10 @@
+.bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  z-index: 1000;
+  background: linear-gradient(90deg, var(--primary), var(--glow));
+  box-shadow: 0 0 10px var(--primary);
+  transition: width 0.1s linear;
+}

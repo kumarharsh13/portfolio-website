@@ -31,7 +31,7 @@
 	},	
     {
 		"certificateTitle": "SQL (Basic)",
-		"organisation": "Udemy",
+		"organisation": "HackerRank",
         "certificateImage": "SQL.png"
 	},	
     {
@@ -58,6 +58,56 @@
 		"certificateTitle": "Interpersonal Communication",
 		"organisation": "LinkedIn",
         "certificateImage": "InterpersonalCommunication.png"
+	},
+	{
+		"certificateTitle": "Agility",
+		"organisation": "Comviva",
+		"certificateImage": "Agility.png"
+	},
+	{
+		"certificateTitle": "Ownership",
+		"organisation": "Comviva",
+		"certificateImage": "Ownership.png"
+	},
+	{
+		"certificateTitle": "Passion & Energy",
+		"organisation": "Comviva",
+		"certificateImage": "PassionEnergy.png"
+	},
+	{
+		"certificateTitle": "Responsiveness",
+		"organisation": "Comviva",
+		"certificateImage": "Responsiveness.png"
+	},
+	{
+		"certificateTitle": "Customer Handling & Engagement",
+		"organisation": "Comviva",
+		"certificateImage": "CustomerHandling.png"
+	},
+	{
+		"certificateTitle": "Interpersonal Skills",
+		"organisation": "Comviva",
+		"certificateImage": "InterpersonalSkills.png"
+	},
+	{
+		"certificateTitle": "Ruby on Rails",
+		"organisation": "Comviva",
+		"certificateImage": "RubyOnRails.png"
+	},
+	{
+		"certificateTitle": "SDLC (Beginner)",
+		"organisation": "Comviva",
+		"certificateImage": "SDLCBeginner.png"
+	},
+	{
+		"certificateTitle": "System Design & Architecture (Basic)",
+		"organisation": "Udemy",
+		"certificateImage": "SystemDesign.jpg"
+	},
+	{
+		"certificateTitle": "JavaScript",
+		"organisation": "Udemy",
+		"certificateImage": "JavaScriptUdemy.png"
 	}
 
 ]

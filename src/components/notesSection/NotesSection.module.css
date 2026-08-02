@@ -1,0 +1,41 @@
+.section { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 12rem 4rem; }
+.sectionHead { margin-bottom: 5rem; }
+.kicker { font-family: var(--font-head); font-size: 1.4rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+.heading { font-size: clamp(3rem, 4.5vw, 4.4rem); color: var(--text); margin-top: 1rem; }
+.list { display: flex; flex-direction: column; border-top: 1px solid var(--line); }
+.note { border-bottom: 1px solid var(--line); }
+.head {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 2rem;
+  padding: 2.4rem 0.5rem; background: transparent; border: none; cursor: pointer; text-align: left;
+  transition: padding-left 0.25s ease;
+}
+.head:hover { padding-left: 1.4rem; }
+.title { font-size: 2rem; color: var(--text); }
+.hook { font-size: 1.5rem; color: var(--muted); margin-top: 0.5rem; }
+.chev { font-size: 2rem; color: var(--muted); transition: transform 0.25s ease; }
+.chevOpen { transform: rotate(180deg); }
+.body {
+  padding: 0 0.5rem 3rem; max-width: 74rem; font-size: 1.55rem; line-height: 1.8; color: var(--muted);
+  display: flex; flex-direction: column; gap: 1.4rem; align-items: flex-start;
+}
+.link {
+  display: inline-flex; align-items: center; gap: 0.7rem;
+  font-size: 1.4rem; color: var(--accent);
+  padding: 0.7rem 1.3rem; border-radius: 999px; border: 1px solid var(--line);
+  transition: border-color 0.2s ease;
+}
+.link:hover { border-color: var(--accent); }
+@media (max-width: 48em) { .section { padding: 8rem 2rem; } }
+
+/* Home brief rows (link to detail route) */
+.briefRow {
+  display: flex; align-items: center; justify-content: space-between; gap: 2rem;
+  padding: 2.4rem 0.5rem; border-bottom: 1px solid var(--line);
+  color: inherit; transition: padding-left 0.25s ease;
+}
+.briefRow:hover { padding-left: 1.4rem; }
+.briefArrow { color: var(--accent); font-size: 1.8rem; }
+.viewAll {
+  display: inline-flex; align-items: center; gap: 0.7rem; align-self: flex-start;
+  margin-top: 2.4rem; font-family: var(--font-head); font-size: 1.5rem; color: var(--accent);
+}

@@ -1,0 +1,12 @@
+.section { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 12rem 4rem; }
+.head { margin-bottom: 5rem; }
+.kicker { font-family: var(--font-head); font-size: 1.4rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+.heading { font-size: clamp(3rem, 4.5vw, 4.4rem); color: var(--text); margin-top: 1rem; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; }
+.card { padding: 2.6rem; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(255,255,255,0.015); transition: border-color 0.3s ease, transform 0.3s ease; }
+.card:hover { border-color: var(--line-strong); transform: translateY(-4px); box-shadow: 0 0 40px rgba(138,130,251,0.06); }
+.dot { display: inline-block; width: 0.8rem; height: 0.8rem; border-radius: 50%; background: var(--accent); box-shadow: 0 0 10px var(--accent); margin-bottom: 1.4rem; }
+.label { font-size: 1.9rem; color: var(--text); }
+.note { font-size: 1.5rem; line-height: 1.7; color: var(--muted); margin-top: 0.8rem; }
+@media (max-width: 64em) { .grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 44em) { .grid { grid-template-columns: 1fr; } .section { padding: 8rem 2rem; } }

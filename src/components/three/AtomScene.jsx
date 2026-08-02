@@ -23,7 +23,7 @@ function Orbit({ icons, radius, tilt, speed, phase = 0 }) {
   const n = icons.length;
   return (
     <group rotation={tilt}>
-      <Line points={ringPoints(radius)} color="#8a82fb" transparent opacity={0.22} lineWidth={1} />
+      <Line points={ringPoints(radius)} color="#8a82fb" transparent opacity={0.14} lineWidth={1} />
       <group ref={spinner}>
         {icons.map((src, i) => {
           const a = (i / n) * Math.PI * 2;

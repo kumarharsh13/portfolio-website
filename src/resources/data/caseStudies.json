@@ -1,0 +1,81 @@
+[
+  {
+    "title": "Distributed Job Orchestration",
+    "summary": "Scaled a job platform to 12M+ jobs/day.",
+    "tags": ["Ruby on Rails", "PostgreSQL", "RabbitMQ", "Redis"],
+    "problem": "A central job platform was hitting throughput limits as volume grew into the millions of jobs per day; workers contended on the same tables and latency spiked under load.",
+    "approach": "Partitioned the PostgreSQL job tables, moved processing to asynchronous workers, and made every job idempotent so retries were safe. Tuned batch sizes and back-pressure.",
+    "impact": "12M+ jobs/day with ~40% higher throughput and predictable latency, with failure recovery handled automatically instead of manually.",
+    "diagram": [
+      { "label": "API", "sub": "enqueue jobs" },
+      { "label": "RabbitMQ", "sub": "durable queue" },
+      { "label": "Workers", "sub": "parallel · idempotent" },
+      { "label": "PostgreSQL", "sub": "partitioned tables" }
+    ],
+    "links": []
+  },
+  {
+    "title": "Multi-Bank HTTP Proxy",
+    "summary": "Transparent tenant-aware routing to banks' LMS systems.",
+    "tags": ["Node.js", "Express", "RabbitMQ", "PostgreSQL", "Redis"],
+    "problem": "Customer API traffic had to reach the correct bank's loan-management system, with clean tenant isolation.",
+    "approach": "Built a transparent HTTP proxy that resolves the tenant from the MSISDN and routes traffic to the right bank's LMS, keeping the integration surface uniform.",
+    "impact": "A single, maintainable entry point for multi-bank routing instead of bespoke per-bank integrations.",
+    "diagram": [
+      { "label": "API Request", "sub": "customer traffic" },
+      { "label": "Multi-Bank Interceptor", "sub": "MSISDN tenant resolution" },
+      { "label": "Bank LMS", "sub": "routed to respective bank" }
+    ],
+    "links": []
+  },
+  {
+    "title": "Financial Reconciliation Pipeline",
+    "summary": "Automated reconciliation of 300K+ transactions/day.",
+    "tags": ["Ruby on Rails", "PostgreSQL", "Idempotency"],
+    "problem": "Reconciliation was slow and error-prone, and failures needed manual intervention — risky for financial data.",
+    "approach": "Built idempotent reconciliation workflows with automated failure recovery, so re-runs converge to the same state and transient failures self-heal.",
+    "impact": "300K+ transactions/day reconciled automatically with far less manual effort and higher accuracy.",
+    "code": {
+      "title": "idempotent_worker.rb",
+      "lines": [
+        "# Reconcile a batch — safe to run twice.",
+        "def reconcile(txn)",
+        "  key = \"recon:#{txn.id}\"",
+        "  return if seen?(key) # already processed",
+        "",
+        "  match = find_ledger_entry(txn)",
+        "  upsert_reconciliation(txn, match)",
+        "  mark_seen(key) # dedupe future retries",
+        "end"
+      ]
+    },
+    "links": []
+  },
+  {
+    "title": "Credit-Rule Engine Refactor",
+    "summary": "Cut rule execution from 9 hours to 2–3.",
+    "tags": ["Ruby on Rails", "Parallelism", "PostgreSQL", "Sidekiq", "Batching"],
+    "problem": "The credit-rule engine took ~9 hours to run, blocking downstream processes and limiting how often rules could be evaluated.",
+    "approach": "Introduced parallel processing and workload partitioning so independent rule sets run concurrently instead of sequentially.",
+    "impact": "Execution dropped from 9 hours to 2–3 hours, unblocking more frequent runs.",
+    "links": []
+  },
+  {
+    "title": "Async Bulk Ingestion",
+    "summary": "1M+ row uploads via parallel, idempotent workers.",
+    "tags": ["RabbitMQ", "Redis", "PostgreSQL", "Ruby on Rails"],
+    "problem": "Large data uploads (1M+ rows) had to process reliably without blocking the app or duplicating work when a batch was retried.",
+    "approach": "Designed asynchronous bulk-ingestion workflows on RabbitMQ, Redis, and PostgreSQL — parallel workers, idempotent processing, and batched job execution so uploads run concurrently and can safely re-run.",
+    "impact": "Supports 1M+ row uploads with parallel throughput and no duplicate side-effects on failure.",
+    "links": []
+  },
+  {
+    "title": "Consent Management Platform",
+    "summary": "Auditable opt-in/opt-out for 2M+ users.",
+    "tags": ["Ruby on Rails", "PostgreSQL", "Auditability"],
+    "problem": "A platform for 2M+ users needed to track consent (opt-in/opt-out) with a complete, trustworthy history for regulatory audits.",
+    "approach": "Modelled consent with a current-state table for fast live reads plus an append-only audit-history table, so every opt-in/opt-out change is traceable for compliance.",
+    "impact": "2M+ users' consent tracked with audit-ready history that stands up to regulatory review.",
+    "links": []
+  }
+]

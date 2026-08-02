@@ -1,0 +1,5 @@
+.noise {
+  position: fixed; inset: 0; z-index: 3; pointer-events: none;
+  opacity: 0.04; mix-blend-mode: overlay;
+  background-repeat: repeat;
+}

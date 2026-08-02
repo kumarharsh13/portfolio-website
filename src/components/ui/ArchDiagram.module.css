@@ -1,0 +1,20 @@
+.diagram {
+  display: flex; flex-wrap: wrap; align-items: stretch; gap: 0.4rem;
+  margin: 0.6rem 0 0.4rem;
+}
+.step { display: flex; align-items: center; gap: 0.4rem; }
+.node {
+  display: flex; flex-direction: column; gap: 0.3rem; justify-content: center;
+  min-width: 12rem; padding: 1.2rem 1.4rem; border-radius: 10px;
+  background: rgba(255, 255, 255, 0.02); border: 1px solid var(--line);
+}
+.label { font-family: var(--font-head); font-size: 1.5rem; color: var(--text); }
+.sub { font-size: 1.15rem; color: var(--muted); }
+.arrow { color: var(--accent); font-size: 1.8rem; padding: 0 0.4rem; }
+
+@media (max-width: 44em) {
+  .diagram { flex-direction: column; align-items: stretch; }
+  .step { flex-direction: column; align-items: stretch; }
+  .node { min-width: 0; }
+  .arrow { transform: rotate(90deg); align-self: center; padding: 0.3rem 0; }
+}

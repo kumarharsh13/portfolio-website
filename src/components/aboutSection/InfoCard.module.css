@@ -1,24 +1,110 @@
 .group { display: flex; flex-direction: column; gap: 2rem; }
 .groupTitle { font-size: 2.4rem; color: var(--primary); margin-bottom: 0.5rem; }
-.stack { display: flex; flex-direction: column; gap: 2rem; }
+/* Vertical timeline: a spine down the left with a node dot per entry. */
+.stack {
+  display: flex; flex-direction: column; gap: 3.4rem;
+  position: relative; padding-left: 3rem;
+}
+.stack::before {
+  content: ''; position: absolute; left: 0.5rem; top: 0.9rem; bottom: 0.9rem;
+  width: 2px; background: linear-gradient(var(--accent), rgba(138, 130, 251, 0.12));
+}
 
-.card {
-  perspective: 800px;
-  padding: 2.4rem;
-  border-radius: 16px;
-  background: var(--glass-bg);
-  backdrop-filter: blur(var(--blur));
-  -webkit-backdrop-filter: blur(var(--blur));
-  border: 1px solid var(--glass-border);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.35);
-  will-change: transform;
+.card { position: relative; background: transparent; border: none; box-shadow: none; padding: 0; }
+.card::before {
+  content: ''; position: absolute; left: -3.05rem; top: 0.4rem;
+  width: 1.3rem; height: 1.3rem; border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+  box-shadow: 0 0 12px rgba(138, 130, 251, 0.6);
+  border: 2px solid var(--bg);
 }
 .logo { height: 4rem; width: auto; margin-bottom: 1.2rem; object-fit: contain; }
 .title { font-size: 2rem; color: var(--text); }
+
+/* Company group header (logo + name + parent tag + total tenure) */
+.companyHead { display: flex; align-items: center; gap: 1.4rem; margin-bottom: 1.8rem; }
+.companyHead .logo { margin-bottom: 0; }
+.companyMeta { display: flex; flex-direction: column; gap: 0.4rem; }
+.companyNameRow { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.companyHead .title { font-size: 2.2rem; line-height: 1.2; }
+.parentTag {
+  font-size: 1.15rem; font-weight: 500; color: var(--text-muted);
+  padding: 0.3rem 0.9rem; border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  white-space: nowrap;
+}
+
+/* Roles branch off the company node — a sub-spine with a dot per position. */
+/* Roles hang off the SAME main spine as the company, one level down. */
+.roles {
+  display: flex; flex-direction: column; gap: 2.4rem;
+  position: relative; margin-top: 1rem;
+}
+.points { padding-bottom: 0.4rem; }
+.role { position: relative; padding-left: 2.8rem; }
+/* Horizontal branch from the main spine (stack left ~0.5rem) to the node dot. */
+.role::before {
+  content: ''; position: absolute; left: -2.5rem; top: 1.6rem;
+  width: 2.5rem; height: 2px; background: rgba(138, 130, 251, 0.5);
+}
+/* Node dot sitting just left of the role title. */
+.role::after {
+  content: ''; position: absolute; left: 0; top: 1.15rem;
+  width: 1rem; height: 1rem; border-radius: 50%;
+  background: var(--accent); border: 2px solid var(--bg);
+  box-shadow: 0 0 8px rgba(138, 130, 251, 0.6);
+}
+.roleTitle { font-size: 1.8rem; color: var(--text); display: flex; align-items: center; gap: 0.9rem; flex-wrap: wrap; }
+.roleOrg {
+  font-size: 1.15rem; font-weight: 500; color: var(--text-muted);
+  padding: 0.25rem 0.8rem; border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--line);
+  white-space: nowrap;
+}
+.roleHead {
+  width: 100%; display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; padding: 0.4rem 0; background: transparent; border: none; cursor: pointer; text-align: left;
+}
+.roleRight { display: flex; align-items: center; gap: 1.2rem; color: var(--muted); }
+.roleDates { font-size: 1.3rem; white-space: nowrap; }
+.chev { transition: transform 0.25s ease; color: var(--muted); }
+.chevOpen { transform: rotate(180deg); }
 .meta {
-  display: flex; justify-content: space-between; gap: 1rem;
-  font-size: 1.4rem; color: var(--primary); margin: 0.6rem 0 1rem;
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem;
+  font-size: 1.4rem; color: var(--primary); margin: 0.6rem 0 1.2rem;
   font-weight: 500; flex-wrap: wrap;
 }
+.dates { display: flex; flex-direction: column; align-items: flex-end; gap: 0.2rem; white-space: nowrap; }
+.duration { font-size: 1.2rem; color: var(--text-muted); font-weight: 400; }
+
+.points {
+  list-style: none;
+  display: flex; flex-direction: column; gap: 0.8rem;
+}
+.points li {
+  position: relative;
+  padding-left: 1.8rem;
+  font-size: 1.45rem; line-height: 1.6; color: var(--text-muted);
+}
+.points li { padding-left: 2rem; }
+.points li::before {
+  content: '↗';
+  position: absolute; left: 0; top: 0;
+  color: var(--accent); font-size: 1.3rem; line-height: 1.6;
+}
+
 .desc { font-size: 1.5rem; line-height: 1.7; color: var(--text-muted); }
+.score { display: block; margin-top: 0.6rem; color: var(--glow); font-weight: 500; }
 .locIcon { color: var(--glow); }
+
+@media (max-width: 40em) {
+  .card { padding: 1.8rem; }
+  .title { font-size: 1.8rem; }
+  .companyHead .title { font-size: 2rem; }
+  .meta { flex-direction: column; align-items: flex-start; }
+  .dates { align-items: flex-start; }
+  .roleTitle { font-size: 1.6rem; }
+  .points li { font-size: 1.4rem; }
+}

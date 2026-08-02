@@ -1,0 +1,8 @@
+[
+  { "label": "Distributed systems", "note": "Going deeper on partitioning, consensus, and failure modes." },
+  { "label": "System design", "note": "Designing for scale before the scale arrives." },
+  { "label": "Building products", "note": "Shipping complete side projects end to end." },
+  { "label": "AI in engineering", "note": "Integrating AI into backend products and dev workflows — building with it, and shipping faster because of it." },
+  { "label": "Mentoring & coaching", "note": "Guiding engineers, and lifestyle coaching outside work." },
+  { "label": "Reading", "note": "A mix of deep technical books and self-help." }
+]

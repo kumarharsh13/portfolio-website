@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Cardinality drives index selectivity",
+    "hook": "An index on a low-cardinality column often does nothing.",
+    "body": "Cardinality — how many distinct values a column holds — decides whether an index actually helps. High-cardinality columns (user_id, email) let an index cut millions of rows down to a handful, so the planner uses it. Low-cardinality ones (a boolean, a 3-value status) barely narrow anything, so the planner ignores the index and scans regardless. I hit this debugging a slow query in production: the index existed, but the column's low selectivity meant it was never chosen.",
+    "url": "https://www.linkedin.com/posts/kumarharsh13_cardinality-drives-index-selectivity-and-activity-7424296835541962752-P0YA"
+  },
+  {
+    "title": "Partitioning keeps big tables fast",
+    "hook": "Past tens of millions of rows, one table becomes the bottleneck.",
+    "body": "Table partitioning splits a huge table into smaller physical chunks — by range, list, or hash. Queries that filter on the partition key touch only the relevant partitions instead of scanning everything, so reads stay fast as data grows, and old partitions can be dropped or archived cheaply. I leaned on partitioned PostgreSQL to keep a 12M-jobs/day platform responsive under load.",
+    "url": "https://www.linkedin.com/posts/kumarharsh13_keeping-queries-fast-with-table-partitioning-activity-7426841110397870082-uz8g"
+  },
+  {
+    "title": "Read the plan before you optimize",
+    "hook": "EXPLAIN ANALYZE shows what the database actually does, not what you assume.",
+    "body": "Guessing at slow queries wastes time. EXPLAIN ANALYZE runs the query and shows the real plan — which indexes were used, where sequential scans happen, estimated vs actual rows, and where the time goes. Optimizing without it is guesswork; reading it turns 'this feels slow' into a specific, fixable bottleneck.",
+    "url": "https://www.linkedin.com/posts/kumarharsh13_explain-analyze-importance-activity-7429370255959027712-ohfU"
+  },
+  {
+    "title": "Query mistakes that silently kill performance",
+    "hook": "The query returns correct results — and quietly gets slower every month.",
+    "body": "Some patterns work fine on small data and fall apart at scale: SELECT * pulling unused columns, N+1 queries in a loop, functions on indexed columns defeating the index, low-selectivity filters, and unbounded result sets. They pass tests and reviews, then surface as production latency. Knowing the anti-patterns is half the fix.",
+    "url": "https://www.linkedin.com/posts/kumarharsh13_query-mistakes-that-silently-kill-performance-activity-7432268104753217536-lXFj"
+  },
+  {
+    "title": "When the database freezes: locking",
+    "hook": "Sometimes nothing is slow — everything is just waiting on a lock.",
+    "body": "Under concurrency, a long transaction or an aggressive lock can block everything queued behind it, and the symptom looks like a frozen database rather than a slow query. Understanding lock types, keeping write transactions short, and ordering access consistently is how you avoid contention pile-ups — and how you diagnose them when they hit production.",
+    "url": "https://www.linkedin.com/posts/kumarharsh13_when-database-freeze-activity-7437341534871564288-JVPX"
+  },
+  {
+    "title": "Idempotency is the backbone of retries",
+    "hook": "If an operation can run twice safely, failure stops being scary.",
+    "body": "At scale you will retry — networks blip, workers restart, queues redeliver. The trick is designing every write so running it twice lands the same result: dedup keys, upserts, and state that converges. Once processing is idempotent, automated recovery replaces the 2am page."
+  },
+  {
+    "title": "Async everything, but design for recovery",
+    "hook": "Throughput comes from queues; reliability comes from what happens when they fail.",
+    "body": "Moving work onto Sidekiq or RabbitMQ and background workers unlocks parallelism, but the real engineering is the failure path: partitioning to avoid contention, back-pressure so you don't drown, and recovery that re-drives failed batches without human hands."
+  },
+  {
+    "title": "Indexing is a product decision",
+    "hook": "A missing index is a latency bug your users feel.",
+    "body": "On high-traffic endpoints, the query plan is part of the UX. Profiling the hot paths and adding the right indexes cut backend latency by ~40% for me — no new hardware, just understanding how the data is actually read."
+  },
+  {
+    "title": "Audit tables beat mutable state",
+    "hook": "For anything regulated, history is a feature.",
+    "body": "A consent platform for millions of users needed to answer 'what was true, and when'. Keeping a current-state table alongside an append-only audit history made opt-in/opt-out auditable and debuggable — mutation hides the story, history tells it."
+  },
+  {
+    "title": "Owning production, not just shipping it",
+    "hook": "Writing the code is half the job; keeping it healthy in production is the rest.",
+    "body": "I've handled plenty of live production incidents on high-throughput financial systems — reproducing the failure under load, isolating the root cause, and deploying an instant patch fix to contain it without taking the platform down. Fast, safe hotfix deploys plus idempotent, observable design mean issues get resolved in minutes and don't recur, instead of escalating."
+  },
+  {
+    "title": "Guard the main branch with CI",
+    "hook": "Every pull request runs RuboCop and RSpec before it can merge.",
+    "body": "I designed a CI pipeline that runs RuboCop and the RSpec suite on every pull request, so style violations and failing tests block the merge automatically. Broken or inconsistent code never reaches main, and review time goes to design and trade-offs instead of nitpicking formatting."
+  }
+]

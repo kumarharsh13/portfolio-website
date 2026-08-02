@@ -1,0 +1,30 @@
+.landing {
+  min-height: 100vh; width: 100%;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 10rem 0 0; gap: 4rem;
+}
+.top {
+  display: flex; align-items: center; justify-content: space-between; gap: 4rem;
+  width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 4rem;
+}
+.intro { flex: 1 1 52%; display: flex; flex-direction: column; align-items: flex-start; gap: 1.6rem; }
+.kicker {
+  font-family: var(--font-head); font-size: 1.4rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--accent);
+}
+.name { font-size: clamp(4.4rem, 7vw, 7.6rem); line-height: 1.02; color: var(--text); }
+.positioning { font-size: 1.8rem; line-height: 1.7; color: var(--muted); max-width: 52rem; }
+.terminalWrap { margin-top: 1.4rem; width: 100%; }
+
+.atomWrap { flex: 1 1 44%; height: 78vh; min-width: 30rem; }
+.atomFallback {
+  width: 100%; height: 100%;
+  background: radial-gradient(circle at 50% 45%, rgba(138,130,251,0.14), transparent 60%);
+}
+
+@media (max-width: 64em) {
+  .top { flex-direction: column-reverse; }
+  .atomWrap { width: 100%; height: 46vh; }
+  .intro { align-items: center; text-align: center; }
+  .positioning { text-align: center; }
+}

@@ -1,26 +1,44 @@
 [
 	{
-		"jobTitle": "Senior Software Engineer",
 		"company": "YABX",
-		"startDate": "Dec-2024",
-		"endDate": "Present",
+		"parent": "Comviva",
 		"logo": "yabx.svg",
-		"description": "Experienced Full-Stack Ruby on Rails Developer with a strong background in integrating and optimizing loan management systems. Successfully implemented RabbitMQ for efficient message queuing, enhancing system performance and real-time credit limit generation. Spearheaded a multi-feature integration to streamline workflows and ensure accurate calculations based on dynamic data inputs. Automated the reconciliation process, reducing manual effort by 85% while improving accuracy. Developed and maintained key sub-modules, ensuring scalability and timely delivery. Proactively debugged and resolved production issues, reviewed code, and mentored team members to enhance overall system stability and team efficiency."    
-	},
-	{
-		"jobTitle": "Software Engineer",
-		"company": "YABX",
-		"startDate": "Aug-2023",
-		"endDate": "Dec-2024",
-		"logo": "yabx.svg",
-		"description": "Experienced software engineer with a comprehensive background in Ruby on Rails (RoR), with expertise in optimizing application performance, developing and integrating APIs, and enhancing user interfaces (UI). Skilled in creating seamless, intuitive UIs while also focusing on backend performance and system reliability. Proven ability to troubleshoot complex issues, implement code fixes, and deliver efficient, user-centric solutions that meet business needs."    
-	},
-	{
-		"jobTitle": "Product Development Intern",
-		"company": "Comviva",
 		"startDate": "Feb-2023",
-		"endDate": "Aug-2023",
-		"logo": "comviva.png",
-		"description": "As a Product Development Intern, I focused on improving code quality, writing tests, and gaining hands-on experience with front-end and back-end technologies. I worked closely with the development team to implement best practices and contribute to a variety of projects, including building and testing features for a full-stack web application."
+		"endDate": "Present",
+		"roles": [
+			{
+				"jobTitle": "Senior Software Engineer",
+				"startDate": "Dec-2024",
+				"endDate": "Present",
+				"points": [
+					"Architected a transparent multi-bank HTTP proxy platform (Node.js / Express) routing customer API traffic to banks' LMS systems via MSISDN-based tenant resolution.",
+					"Scaled a distributed job-orchestration platform to 12M+ jobs/day, improving throughput 40% with partitioned PostgreSQL and asynchronous workers.",
+					"Built financial reconciliation pipelines processing 300K+ transactions/day with idempotent workflows and automated failure recovery.",
+					"Refactored the credit-rule engine, cutting execution time from 9 hours to 2–3 hours via parallel processing and workload partitioning.",
+					"Created a consent-management platform for 2M+ users with current-state and audit-history tracking to support regulatory audits."
+				]
+			},
+			{
+				"jobTitle": "Software Engineer",
+				"startDate": "Aug-2023",
+				"endDate": "Dec-2024",
+				"points": [
+					"Designed an asynchronous backend allocation service, reducing product-offer generation from 2 minutes to 10 seconds.",
+					"Improved backend API latency by 40% through SQL query optimization and indexing on high-traffic endpoints.",
+					"Designed asynchronous bulk-ingestion workflows (RabbitMQ, Redis, PostgreSQL) supporting 1M+ row uploads with parallel, idempotent processing.",
+					"Built and maintained RESTful APIs (Node.js / Express) for a loan-collection portal — payments, repayment schedules, and loan-status workflows."
+				]
+			},
+			{
+				"jobTitle": "Product Development Intern",
+				"org": "via Comviva",
+				"startDate": "Feb-2023",
+				"endDate": "Aug-2023",
+				"points": [
+					"Resolved 18K+ static-analysis issues across backend services, improving code quality and maintainability.",
+					"Contributed to full-stack feature development with tests, adopting team engineering best practices."
+				]
+			}
+		]
 	}
 ]

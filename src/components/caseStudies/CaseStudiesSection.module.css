@@ -1,0 +1,83 @@
+.section { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 12rem 4rem; }
+.headWrap { margin-bottom: 5rem; }
+.kicker { font-family: var(--font-head); font-size: 1.4rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+.heading { font-size: clamp(3rem, 4.5vw, 4.4rem); color: var(--text); margin-top: 1rem; }
+
+.list { display: flex; flex-direction: column; border-top: 1px solid var(--line); }
+.row { border-bottom: 1px solid var(--line); }
+.head { margin: 0; }
+.row .head, .row > .head { }
+.row button.head { width: 100%; }
+
+.row .headMain { text-align: left; }
+.row button {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 2rem;
+  padding: 2.6rem 0.5rem; background: transparent; border: none; cursor: pointer;
+  transition: padding-left 0.25s ease;
+}
+.row button:hover { padding-left: 1.4rem; }
+.title { font-size: 2.2rem; color: var(--text); }
+.summary { font-size: 1.5rem; color: var(--muted); margin-top: 0.5rem; }
+.chev { font-size: 2rem; color: var(--muted); transition: transform 0.25s ease; }
+.chevOpen { transform: rotate(180deg); }
+
+.body { padding: 0 0.5rem 3rem; display: grid; gap: 1.8rem; max-width: 76rem; }
+.block { display: grid; gap: 0.5rem; }
+.label { font-family: var(--font-head); font-size: 1.2rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+.block p { font-size: 1.55rem; line-height: 1.75; color: var(--muted); }
+.meta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.4rem; margin-top: 0.6rem; }
+.tags { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+.tag { font-size: 1.25rem; color: var(--muted); padding: 0.4rem 1rem; border: 1px solid var(--line); border-radius: 999px; }
+.links { display: flex; gap: 1.4rem; }
+.link { font-size: 1.4rem; color: var(--accent); }
+
+@media (max-width: 48em) { .section { padding: 8rem 2rem; } .row button { padding: 2rem 0; } }
+
+/* Other Projects (personal) grid */
+.subheading { font-size: 2.4rem; color: var(--text); margin: 7rem 0 2.6rem; }
+.projGrid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr)); gap: 1.8rem;
+}
+.projCard {
+  display: flex; flex-direction: column; overflow: hidden;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: rgba(255,255,255,0.015);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.projCard:hover { transform: translateY(-4px); border-color: var(--line-strong); }
+.projThumb { width: 100%; height: 16rem; overflow: hidden; background: rgba(0,0,0,0.25); }
+.projThumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.projBody { padding: 2rem; display: flex; flex-direction: column; gap: 1rem; }
+.projTitle { font-size: 1.9rem; color: var(--text); }
+.projDesc {
+  font-size: 1.45rem; line-height: 1.6; color: var(--muted);
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.projTags { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+.projLinks { display: flex; gap: 1.6rem; margin-top: 0.4rem; }
+.projLinks .link { font-size: 1.4rem; color: var(--accent); }
+
+@media (max-width: 40em) { .projGrid { grid-template-columns: 1fr; } }
+
+.showMore {
+  align-self: center; margin: 3rem auto 0;
+  font-family: var(--font-head); font-size: 1.5rem; color: var(--text);
+  padding: 1rem 2rem; border-radius: 999px; cursor: pointer;
+  background: transparent; border: 1px solid var(--line);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.showMore:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Home brief rows (link to detail route) */
+.briefRow {
+  display: flex; align-items: center; justify-content: space-between; gap: 2rem;
+  padding: 2.4rem 0.5rem; border-bottom: 1px solid var(--line);
+  color: inherit; transition: padding-left 0.25s ease;
+}
+.briefRow:hover { padding-left: 1.4rem; }
+.briefArrow { color: var(--accent); font-size: 1.8rem; }
+.viewAll {
+  display: inline-flex; align-items: center; gap: 0.7rem; align-self: flex-start;
+  margin-top: 2.4rem; font-family: var(--font-head); font-size: 1.5rem; color: var(--accent);
+}
+.viewAll:hover { gap: 1.1rem; }

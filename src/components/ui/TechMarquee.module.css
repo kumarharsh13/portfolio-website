@@ -1,0 +1,13 @@
+.wrap {
+  width: 100%; overflow: hidden; padding: 1.4rem 0;
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+}
+.track { display: inline-flex; white-space: nowrap; animation: scroll 28s linear infinite; }
+.wrap:hover .track { animation-play-state: paused; }
+.item { display: inline-flex; align-items: center; font-size: 1.6rem; color: var(--muted); font-family: var(--font-head); }
+.dot { margin: 0 2.4rem; color: var(--accent); }
+
+@keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .track { animation: none; } }

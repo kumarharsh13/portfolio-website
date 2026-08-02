@@ -1,68 +1,63 @@
-import React, { useState, useEffect, lazy } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 
 import "./App.css";
-import Navigation from "../src/components/navigation/Navigation";
-import CanvasScene from "./components/three/CanvasScene";
-import HeroSection from "./components/heroSection/HeroSection";
-import AboutSection from "./components/aboutSection/AboutSection";
-import ProjectSection from "./components/projectSection/ProjectSection";
-import CertificateSection from "./components/certificateSection/CertificateSection";
-import FooterSection from "./components/footerSection/FooterSection";
+import GridBackground from "./components/ui/GridBackground";
+import NoiseOverlay from "./components/ui/NoiseOverlay";
+import Spotlight from "./components/ui/Spotlight";
+import Loader from "./components/ui/Loader";
+import ScrollProgress from "./components/ui/ScrollProgress";
+import BackToTop from "./components/ui/BackToTop";
+import CustomCursor from "./components/ui/CustomCursor";
+import CardSpotlight from "./components/ui/CardSpotlight";
+import Brand from "./components/ui/Brand";
+import CommandPalette from "./components/ui/CommandPalette";
+import Home from "./pages/Home";
+import CaseStudyList from "./pages/CaseStudyList";
+import CaseStudyDetail from "./pages/CaseStudyDetail";
+import NoteList from "./pages/NoteList";
+import NoteDetail from "./pages/NoteDetail";
 
-const HeroBackground = lazy(() => import("./components/three/HeroBackground"));
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  return null;
+}
 
 function App() {
-  const [inView, setInView] = useState('');
+  const [paletteOpen, setPaletteOpen] = useState(false);
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section");
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("in-view");
-            setInView(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-
-    return () => {
-      sections.forEach((section) => {
-        observer.unobserve(section);
-      });
+    const onKey = (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); setPaletteOpen((o) => !o); }
     };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
   }, []);
 
   return (
     <div className="App">
-      <div className="globalBg">
-        <CanvasScene fallback={null} camera={{ position: [0, 0, 5], fov: 60 }}>
-          <HeroBackground />
-        </CanvasScene>
-      </div>
-      <Navigation inView={inView} />
-      <section id="home">
-        <HeroSection />
-      </section>
-      <section id="about">
-        <AboutSection />
-      </section>
-      <section id="projects">
-        <ProjectSection />
-      </section>
-      <section id="certificates">
-        <CertificateSection />
-      </section>
-      <section id="contact">
-        <FooterSection />
-      </section>
+      <Loader />
+      <CustomCursor />
+      <CardSpotlight />
+      <ScrollProgress />
+      <div className="globalBg"><GridBackground /></div>
+      <NoiseOverlay />
+      <Spotlight />
+      <Brand onOpenPalette={() => setPaletteOpen(true)} />
+      <CommandPalette open={paletteOpen} onClose={() => setPaletteOpen(false)} />
+      <ScrollToTop />
+
+      <Routes>
+        <Route path="/" element={<Home paletteOpen={paletteOpen} />} />
+        <Route path="/case-studies" element={<CaseStudyList />} />
+        <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
+        <Route path="/notes" element={<NoteList />} />
+        <Route path="/notes/:slug" element={<NoteDetail />} />
+        <Route path="*" element={<Home paletteOpen={paletteOpen} />} />
+      </Routes>
+
+      <BackToTop />
     </div>
   );
 }
