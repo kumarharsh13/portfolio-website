@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio-website/static/css/main.87b56b9d.css",
-    "main.js": "/portfolio-website/static/js/main.e22e021c.js",
+    "main.js": "/portfolio-website/static/js/main.e9179a88.js",
     "static/js/56.16cd8bf8.chunk.js": "/portfolio-website/static/js/56.16cd8bf8.chunk.js",
     "static/media/CourseManagementSystem1.png": "/portfolio-website/static/media/CourseManagementSystem1.0ff2ebbcc8bd9437d766.png",
     "static/media/PortfolioWebsite1.png": "/portfolio-website/static/media/PortfolioWebsite1.cd4e24ad859a0d9efe61.png",
@@ -47,13 +47,13 @@
     "static/media/InterpersonalCommunication.png": "/portfolio-website/static/media/InterpersonalCommunication.6766271d403768c3fe4e.png",
     "static/media/PythonLinkedIn.png": "/portfolio-website/static/media/PythonLinkedIn.1e74854914d332d393ec.png",
     "static/media/comviva.png": "/portfolio-website/static/media/comviva.db4c28a28dfa6acf1807.png",
-    "static/media/Ace Card for Airtel Zambia.jpeg": "/portfolio-website/static/media/Ace Card for Airtel Zambia.7650466e748023e882fa.jpeg",
-    "static/media/Ace Card for Airtel ZM OD and Micro Loans.jpeg": "/portfolio-website/static/media/Ace Card for Airtel ZM OD and Micro Loans.c7a1e7c46dce1627df46.jpeg",
+    "static/media/airtel-zambia.jpeg": "/portfolio-website/static/media/airtel-zambia.7650466e748023e882fa.jpeg",
+    "static/media/airtel-zm-od-and-micro-loans.jpeg": "/portfolio-website/static/media/airtel-zm-od-and-micro-loans.c7a1e7c46dce1627df46.jpeg",
     "static/media/reactjs.png": "/portfolio-website/static/media/reactjs.73258d5e0161062cf77f.png",
-    "static/media/Ace Card for Airtel ZM OD .jpeg": "/portfolio-website/static/media/Ace Card for Airtel ZM OD .18f6af213912531b91d9.jpeg",
+    "static/media/airtel-zm-od.jpeg": "/portfolio-website/static/media/airtel-zm-od.18f6af213912531b91d9.jpeg",
     "static/media/posgressql.png": "/portfolio-website/static/media/posgressql.543d2f68d70043ec73ee.png",
-    "static/media/Ace Card for Orange Project.jpeg": "/portfolio-website/static/media/Ace Card for Orange Project.77ddf311674736765929.jpeg",
-    "static/media/Ace Card for Airtel ZM.jpeg": "/portfolio-website/static/media/Ace Card for Airtel ZM.8264ba9d635a61b467ed.jpeg",
+    "static/media/orange-project.jpeg": "/portfolio-website/static/media/orange-project.77ddf311674736765929.jpeg",
+    "static/media/airtel-zm.jpeg": "/portfolio-website/static/media/airtel-zm.8264ba9d635a61b467ed.jpeg",
     "static/media/MongoDB.png": "/portfolio-website/static/media/MongoDB.b723bb18907da666f951.png",
     "static/media/Redis.png": "/portfolio-website/static/media/Redis.a969f38a808895547570.png",
     "static/media/mysql.png": "/portfolio-website/static/media/mysql.138af6ce65cd59a39782.png",
@@ -63,11 +63,11 @@
     "static/media/yabx.svg": "/portfolio-website/static/media/yabx.4ef1c14ea911fd54211e4edae8838751.svg",
     "index.html": "/portfolio-website/index.html",
     "main.87b56b9d.css.map": "/portfolio-website/static/css/main.87b56b9d.css.map",
-    "main.e22e021c.js.map": "/portfolio-website/static/js/main.e22e021c.js.map",
+    "main.e9179a88.js.map": "/portfolio-website/static/js/main.e9179a88.js.map",
     "56.16cd8bf8.chunk.js.map": "/portfolio-website/static/js/56.16cd8bf8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.87b56b9d.css",
-    "static/js/main.e22e021c.js"
+    "static/js/main.e9179a88.js"
   ]
 }
