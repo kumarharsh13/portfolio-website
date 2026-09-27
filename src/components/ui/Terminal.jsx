@@ -3,16 +3,17 @@ import styles from './Terminal.module.css';
 import Resume from '../../resources/resume/Harsh Kumar Resume.pdf';
 
 const RESPONSES = {
-  help: "Commands: whoami · skills · experience · projects · notes · learning · contact · resume · clear",
-  whoami: 'Harsh Kumar — Senior Backend Engineer @ YABX (Comviva). Distributed financial systems, millions of ops/day.',
-  skills: 'Ruby · Rails · Node.js · Express · PostgreSQL · MongoDB · Redis · RabbitMQ · Sidekiq · Python · Git',
-  experience: 'YABX (Comviva): Intern (via Comviva) → Software Engineer → Senior Software Engineer, 2023–present.',
+  help: "Commands: whoami · skills · patterns · experience · projects · notes · learning · contact · resume · clear",
+  whoami: 'Harsh Kumar — Technical Lead Engineer @ YABX (Comviva). Distributed financial systems, millions of ops/day.',
+  skills: 'Ruby · Rails · Node.js · Express · React · Python · PostgreSQL · MongoDB · Redis · RabbitMQ · Sidekiq · Git',
+  patterns: 'Distributed systems · event-driven architecture · idempotent processing · multi-tenant routing · API gateway patterns · graceful degradation.',
+  experience: 'YABX (Comviva): Intern (via Comviva) → Software Engineer → Senior Software Engineer → Technical Lead Engineer, 2023–present.',
   projects: 'Job Orchestration (12M jobs/day) · Reconciliation (300K txns/day) · Multi-Bank Proxy · Credit-Rule Engine · Bulk Ingestion · Consent Platform. Full write-ups on the Case Studies page.',
   notes: 'Backend notes: idempotency, indexing, partitioning, EXPLAIN ANALYZE, locking, cardinality. See the Engineering Notes page.',
   learning: 'Distributed systems, system design depth, AI in engineering, and a steady diet of technical + self-help reading.',
   contact: 'kr.harsh13@gmail.com · linkedin.com/in/kumarharsh13 · github.com/kumarharsh13',
   sudo: 'Nice try. 😏',
-  ls: 'whoami  skills  experience  projects  notes  learning  contact  resume',
+  ls: 'whoami  skills  patterns  experience  projects  notes  learning  contact  resume',
 };
 
 export default function Terminal() {

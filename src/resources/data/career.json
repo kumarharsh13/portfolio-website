@@ -6,16 +6,26 @@
 		"startDate": "Feb-2023",
 		"endDate": "Present",
 		"roles": [
+      {
+				"jobTitle": "Technical Lead Engineer",
+				"startDate": "Jul-2026",
+				"endDate": "Present",
+				"points": [
+          "First point of contact and technical owner for the core lending LMS (Ruby on Rails) across 3 international markets — 2 micro-loan markets and 1 overdraft loan market — owning end-to-end system reliability, feature delivery, and cross-market coordination.",
+          "Architected and delivered the Multi-Bank Routing Interceptor, enabling the platform to support multiple banking partners per MNO-country without changes to the existing LMS.",
+          "Drive technical decisions across backend architecture, database design, and system integration, balancing feature velocity with platform stability across markets with distinct lending products and regulatory requirements."
+				]
+			},
 			{
 				"jobTitle": "Senior Software Engineer",
 				"startDate": "Dec-2024",
-				"endDate": "Present",
+				"endDate": "Jul-2026",
 				"points": [
-					"Architected a transparent multi-bank HTTP proxy platform (Node.js / Express) routing customer API traffic to banks' LMS systems via MSISDN-based tenant resolution.",
 					"Scaled a distributed job-orchestration platform to 12M+ jobs/day, improving throughput 40% with partitioned PostgreSQL and asynchronous workers.",
 					"Built financial reconciliation pipelines processing 300K+ transactions/day with idempotent workflows and automated failure recovery.",
 					"Refactored the credit-rule engine, cutting execution time from 9 hours to 2–3 hours via parallel processing and workload partitioning.",
-					"Created a consent-management platform for 2M+ users with current-state and audit-history tracking to support regulatory audits."
+					"Created a consent-management platform for 2M+ users with current-state and audit-history tracking to support regulatory audits.",
+					"Mentored junior and mid-level engineers on system design patterns, code quality, and distributed-systems best practices."
 				]
 			},
 			{
@@ -23,19 +33,19 @@
 				"startDate": "Aug-2023",
 				"endDate": "Dec-2024",
 				"points": [
-					"Designed an asynchronous backend allocation service, reducing product-offer generation from 2 minutes to 10 seconds.",
-					"Improved backend API latency by 40% through SQL query optimization and indexing on high-traffic endpoints.",
+					"Designed an asynchronous backend allocation service, reducing product-offer generation from 2 minutes to 10 seconds by decoupling computation from the request cycle.",
+					"Improved backend API latency by 40% through SQL query optimization, index tuning, and connection pooling on high-traffic endpoints.",
 					"Designed asynchronous bulk-ingestion workflows (RabbitMQ, Redis, PostgreSQL) supporting 1M+ row uploads with parallel, idempotent processing.",
 					"Built and maintained RESTful APIs (Node.js / Express) for a loan-collection portal — payments, repayment schedules, and loan-status workflows."
 				]
 			},
 			{
-				"jobTitle": "Product Development Intern",
+				"jobTitle": "Product Development Engineering Intern",
 				"org": "via Comviva",
 				"startDate": "Feb-2023",
 				"endDate": "Aug-2023",
 				"points": [
-					"Resolved 18K+ static-analysis issues across backend services, improving code quality and maintainability.",
+					"Resolved 18K+ static-analysis issues across backend services, improving codebase maintainability and deployment confidence.",
 					"Contributed to full-stack feature development with tests, adopting team engineering best practices."
 				]
 			}

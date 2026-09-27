@@ -48,7 +48,11 @@ function RoleRow({ role, defaultOpen }) {
         </span>
         <span className={styles.roleRight}>
           <span className={styles.roleDates}>{role.startDate} – {role.endDate}</span>
-          <span className={`${styles.chev} ${open ? styles.chevOpen : ''}`}>⌄</span>
+          <span className={`${styles.chev} ${open ? styles.chevOpen : ''}`} aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </span>
         </span>
       </button>
       {open && (
@@ -85,7 +89,7 @@ function Card({ info }) {
           </div>
           <div className={styles.roles}>
             {info.roles.map((role, i) => (
-              <RoleRow key={i} role={role} defaultOpen />
+              <RoleRow key={i} role={role} defaultOpen={i === 0} />
             ))}
           </div>
         </>
