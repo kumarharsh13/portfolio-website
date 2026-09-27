@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio-website/static/css/main.972b5f9f.css",
-    "main.js": "/portfolio-website/static/js/main.5a75bc82.js",
+    "main.css": "/portfolio-website/static/css/main.ed5f9122.css",
+    "main.js": "/portfolio-website/static/js/main.294152bd.js",
     "static/js/56.16cd8bf8.chunk.js": "/portfolio-website/static/js/56.16cd8bf8.chunk.js",
     "static/media/CourseManagementSystem1.png": "/portfolio-website/static/media/CourseManagementSystem1.0ff2ebbcc8bd9437d766.png",
     "static/media/PortfolioWebsite1.png": "/portfolio-website/static/media/PortfolioWebsite1.cd4e24ad859a0d9efe61.png",
@@ -33,6 +33,7 @@
     "static/media/JavaScriptUdemy.png": "/portfolio-website/static/media/JavaScriptUdemy.9b6d342c9be329c513d1.png",
     "static/media/SDLCBeginner.png": "/portfolio-website/static/media/SDLCBeginner.6ba6963c364281da7d11.png",
     "static/media/RubyOnRails.png": "/portfolio-website/static/media/RubyOnRails.f96fdf67b4d05f1a32af.png",
+    "static/media/Harsh Kumar Resume.pdf": "/portfolio-website/static/media/Harsh Kumar Resume.66c9043d904ae589590a.pdf",
     "static/media/CustomerHandling.png": "/portfolio-website/static/media/CustomerHandling.e7763be4a300d5fc5e6c.png",
     "static/media/PassionEnergy.png": "/portfolio-website/static/media/PassionEnergy.94a3898726f2ae861996.png",
     "static/media/InterpersonalSkills.png": "/portfolio-website/static/media/InterpersonalSkills.61e8abf85420803993df.png",
@@ -40,7 +41,6 @@
     "static/media/Agility.png": "/portfolio-website/static/media/Agility.dedc29bf7014f6ebbb25.png",
     "static/media/Studying.svg": "/portfolio-website/static/media/Studying.d0c1203e46e17a9e14babe2385d5511d.svg",
     "static/media/Working.svg": "/portfolio-website/static/media/Working.9f3287236407be55b8ce36f021d5a3e6.svg",
-    "static/media/Harsh Kumar Resume.pdf": "/portfolio-website/static/media/Harsh Kumar Resume.a81cd743019a192067d6.pdf",
     "static/media/nitrr.png": "/portfolio-website/static/media/nitrr.d18b215eb94337d29d8b.png",
     "static/media/maism.png": "/portfolio-website/static/media/maism.8fb365236139d2aea9cc.png",
     "static/media/PersonalBranding.png": "/portfolio-website/static/media/PersonalBranding.cc37b81ced45a6b6614f.png",
@@ -62,12 +62,12 @@
     "static/media/rails.png": "/portfolio-website/static/media/rails.93a9e72cde4e9bb9fa74.png",
     "static/media/yabx.svg": "/portfolio-website/static/media/yabx.4ef1c14ea911fd54211e4edae8838751.svg",
     "index.html": "/portfolio-website/index.html",
-    "main.972b5f9f.css.map": "/portfolio-website/static/css/main.972b5f9f.css.map",
-    "main.5a75bc82.js.map": "/portfolio-website/static/js/main.5a75bc82.js.map",
+    "main.ed5f9122.css.map": "/portfolio-website/static/css/main.ed5f9122.css.map",
+    "main.294152bd.js.map": "/portfolio-website/static/js/main.294152bd.js.map",
     "56.16cd8bf8.chunk.js.map": "/portfolio-website/static/js/56.16cd8bf8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.972b5f9f.css",
-    "static/js/main.5a75bc82.js"
+    "static/css/main.ed5f9122.css",
+    "static/js/main.294152bd.js"
   ]
 }
